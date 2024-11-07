@@ -1,0 +1,151 @@
+/* Estilo del body */
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0; /* Sin separación entre las cajas */
+  min-height: 100vh; /* Ocupa toda la pantalla verticalmente */
+  overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+/* Estilo general de las cajas */
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-sizing: border-box; /* Incluir borde en las dimensiones */
+  border: 1px solid black; /* Borde negro alrededor de cada caja */
+}
+
+/* Colores de las cajas */
+.rosado { background-color: pink; }
+.verde { background-color: green; }
+.azul { background-color: blue; }
+.rojo { background-color: red; }
+.morado { background-color: purple; }
+.gris { background-color: gray; }
+
+/* Media query para pantallas menores de 500px */
+@media (max-width: 500px) {
+  body {
+      grid-template-rows: 2fr 2fr 1fr 2fr; /* Distribución con distintas alturas */
+      grid-template-columns: 100%; /* Una sola columna */
+  }
+
+  /* Ocultar rojo y morado */
+  .rojo, .morado {
+      display: none;
+  }
+
+  /* Establecer alturas específicas para cada caja visible */
+  .rosado, .verde, .azul, .gris {
+      height: 100%; /* Altura completa para cada caja */
+      width: 100%; /* Ancho completo para cada caja */
+  }
+}
+
+/* Media query para pantallas entre 501px y 750px */
+@media (min-width: 501px) and (max-width: 750px) {
+  body {
+    grid-template-rows: 1fr 1fr 2fr; /* Ajusta la altura automáticamente */
+    grid-template-columns: repeat(12, 1fr); /* Tres columnas iguales */
+    gap: 1px; /* Separación entre cajas */
+  }
+  div {
+    border: 1px solid transparent; /* Borde transparente */
+  }
+  /* Primer fila */
+  .rosado {
+      height: 100%; /* Ocupa toda la fila */
+      grid-column: span 12; /* Ocupa la única columna de la primera fila */
+  }
+
+  /* Segunda fila con 3 columnas iguales */
+
+  
+  .verde {
+      grid-column: span 4; /* Ocupa una columna */
+      height: 100%; /* Ocupa toda la celda */
+  }
+
+  .azul {
+      grid-column: span 4; /* Ocupa una columna */
+      height: 100%; /* Ocupa toda la celda */
+  }
+
+  .rojo {
+      grid-column: span 4; /* Ocupa una columna */
+      height: 100%; /* Ocupa toda la celda */
+  }
+
+  /* Tercera fila */
+  .morado {
+      height: 100%; 
+      grid-column: span 7; /* Ocupa cinco columnas */
+  }
+
+  .gris {
+      height: 100%; 
+      grid-column: span 5; /* Ocupa cuatro columnas */
+  }
+
+  /* Asegurar que las cajas tengan un tamaño adecuado */
+  div {
+      box-sizing: border-box; /* Incluir borde en las dimensiones */
+      border: 1px solid black; /* Borde negro alrededor de cada caja */
+  }
+}
+
+/* Media query para pantallas entre 501px y 750px */
+@media (min-width: 751px) {
+  body {
+    grid-template-rows: 1fr 5fr 8fr 6fr; /* Ajusta la altura automáticamente */
+    grid-template-columns: repeat(12, 1fr); /* Tres columnas iguales */
+    gap: 0px; /* Separación entre cajas */
+  }
+  
+  /* Primer fila */
+  .rosado {
+      height: 100%; /* Ocupa toda la fila */
+      grid-column: span 12; /* Ocupa la única columna de la primera fila */
+  }
+
+  /* Segunda fila con 3 columnas iguales */
+
+  
+  .verde {
+      grid-column: span 12; /* Ocupa una columna */
+      height: 100%; /* Ocupa toda la celda */
+  }
+
+  .azul {
+      grid-column: span 12; /* Ocupa una columna */
+      height: 100%; /* Ocupa toda la celda */
+  }
+
+  .rojo {
+      grid-column: span 4; /* Ocupa una columna */
+      height: 100%; /* Ocupa toda la celda */
+  }
+
+  /* Tercera fila */
+  .morado {
+      height: 100%; 
+      grid-column: span 4; /* Ocupa cinco columnas */
+  }
+
+  .gris {
+      height: 100%; 
+      grid-column: span 4; /* Ocupa cuatro columnas */
+  }
+
+  /* Asegurar que las cajas tengan un tamaño adecuado */
+  div {
+      box-sizing: border-box; /* Incluir borde en las dimensiones */
+      border: 1px solid black; /* Borde negro alrededor de cada caja */
+  }
+}

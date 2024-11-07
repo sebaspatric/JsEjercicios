@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Formulario</title>
+</head>
+<body>
+    <!-- MI PRIMER FORMULARIO SOLICITA NOMBRE Y DIRECCIÓN-->
+<form action="redireccion.html" method="post">
+    <label for="nombre">NOMBRE</label>
+    <input type="text" name="nombre" id="nombre">
+    <label for="direccion">DIRECCIÓN</label>
+    <input type="text" name="direccion" id="direccion">
+    <label for="lista">COLOR FAVORITO</label>
+    <input type="text" name="lista" list="colores">
+    <datalist id="colores">
+        <option label="Rojo" value="rojo"></option>
+        <option value="azul"></option>
+        <option value="amarillo">Amarillo</option>
+    </datalist>
+    <label for="animales">ANIMALES FAVORITOS</label>
+    <select name="animales" id="animales">
+        <option value="perro">Perro</option>
+        <option value="gato">Gato</option>
+        <option value="conejo">Conejo</option>
+    </select>
+    <button>ENVIAR</button>
+    <label for="">Click me</label>
+    <input type="button" value="Botón">
+    <label for="">Verde</label>
+        <input type="checkbox" value="verde" name="color">
+        <label for="">Amarillo</label>
+        <input type="checkbox" value="amarillo" name="color">
+        <label for="">Rojo</label>
+        <input type="checkbox" value="rojo" name="color">
+    <!--  -->
+    <input type="datetime-local" >
+    <input type="email" >
+    <input type="password" >
+    <input type="number" >
+    <input type="submit" value="Enviar consulta" >
+
+    <label for="">Verde</label>
+    <input type="radio" value="Verde" name="color" >
+    <label for="">Amarillo</label>
+    <input type="radio" value="Amarillo" name="color" >
+    <label for="">Rojo</label>
+    <input type="radio" value="Rojo" name="color" >
+    <input type="range" min="1" max="100" value="50">
+    <input type="file" >
+    <input type="url">
+    label for="sugerencia">SUGERENCIA</label>
+    <br>
+    <textarea name="sugerencia" id="sugerencia" cols="30"
+    rows="10"></textarea>
+    </form>
+    <!-- -->
+    <input type="submit" value="Enviar consulta" >
+    <button>ENVIAR</button>
+</body>
+</html>

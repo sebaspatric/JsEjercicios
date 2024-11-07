@@ -1,0 +1,61 @@
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo del título */
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Contenedor de los botones */
+.button-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilo general de los botones */
+button {
+    border: none;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón primario */
+.primary-btn {
+    background-color: #3498db;
+}
+
+/* Botón secundario */
+.secondary-btn {
+    background-color: #2ecc71;
+}
+
+/* Botón de éxito */
+.success-btn {
+    background-color: #27ae60;
+}
+
+
+/* Botón de peligro */
+.danger-btn {
+    background-color: #e74c3c;
+}
+
+/* Efecto hover para todos los botones */
+button:hover {
+    opacity: 0.8;
+}

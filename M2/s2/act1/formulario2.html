@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Hora Médica</title>
+</head>
+<body>
+
+    <h1>Solicitud de Hora Médica</h1>
+
+    <form action="gracias.html" method="GET">
+        <label for="name">Nombre Completo:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+               title="Ingrese un correo válido (ejemplo: usuario@dominio.com)"><br><br>
+
+        <label for="address">Dirección:</label><br>
+        <input type="text" id="address" name="address" required 
+               placeholder="Ej: Calle Falsa 123, Ciudad, Región"><br><br>
+
+        <label for="specialty">Especialidad Médica:</label><br>
+        <select id="specialty" name="specialty" required>
+            <option value="">Seleccione una especialidad</option>
+            <option value="cardiologia">Cardiología</option>
+            <option value="dermatologia">Dermatología</option>
+            <option value="neurologia">Neurología</option>
+            <option value="pediatria">Pediatría</option>
+            <option value="traumatologia">Traumatología</option>
+        </select><br><br>
+
+        <label for="date">Fecha:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Hora (hh:mm):</label><br>
+        <input type="text" id="time" name="time" required placeholder="hh:mm" 
+               pattern="(1[0-5]|[01][0-9]):[0-5][0-9]" 
+               title="Ingrese una hora válida entre 10:41 y 16:47 (ejemplo: 10:41)"><br><br>
+
+        <label for="time-hour">Seleccionar Hora:</label>
+        <select id="time-hour" name="time-hour" required>
+            <option value="">Hora</option>
+            <!-- Opciones de hora de 10 a 16 -->
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+        </select>
+        
+        <label for="time-minute">Seleccionar Minuto:</label>
+        <select id="time-minute" name="time-minute" required>
+            <option value="">Minuto</option>
+            <!-- Opciones de minutos desde 41 hasta 59 -->
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+            <option value="0">00</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+        </select><br><br>
+
+        <button type="submit">Solicitar Hora</button>
+    </form>
+
+</body>
+</html>

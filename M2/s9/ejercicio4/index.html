@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootst
+rap.min.css"
+      rel="stylesheet"
+      integrity="sha384-
+EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="caja1" style="padding: 10px; background-color: chartreuse" onmouseover="mostrarMensaje()" onmouseout="ocultarMensaje()">
+      <p>Texto que se ve desde el inicio</p>
+    </div>
+    <div
+      id="caja2"
+      style="padding: 10px; background-color: blue; display: none"
+    >
+      <p>Texto oculto</p>
+    </div>
+    <div class="container my-5">
+      <div class="btn btn-primary" onclick="cambiarFondo()" ondblclick="volver()" id="boton1">accion 1</div>
+      <div class="btn btn-secondary" onclick="cambiarTexto()"  id="boton2">accion 2</div>
+    </div>
+    <div style="background-color: coral" id="contenido">
+      <h2 id="texto">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae unde
+        accusamus quibusdam, maxime sint, a rem autem veniam quod sunt explicabo
+        eligendi maiores porro tempore tenetur quas incidunt laboriosam? Minus.
+      </h2>
+    </div>
+  </body>
+</html>

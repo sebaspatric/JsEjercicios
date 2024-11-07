@@ -1,0 +1,41 @@
+@media (min-width: 1200px) {
+  .primero {
+    background-color: black;
+  }
+  .segundo {
+    background-color: blanchedalmond;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .primero {
+    background-color: blue;
+  }
+  .segundo {
+    background-color: cadetblue;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .primero {
+    background-color: chocolate;
+  }
+  .segundo {
+    background-color: darkgreen;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .primero {
+    background-color: darkred;
+  }
+  .segundo {
+    background-color: deeppink;
+  }
+}
+@media (max-width: 575px) {
+  .primero {
+    background-color: gold;
+  }
+  .segundo {
+    background-color: indigo;
+  }
+}

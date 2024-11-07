@@ -1,0 +1,38 @@
+table {
+    border-collapse: separate; /* Permitir espacio entre celdas */
+    border-spacing: 2px; /* Espacio entre las celdas */    width: auto; /* Ancho de la tabla */
+    margin: auto; /* Centrar la tabla */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra delgada alrededor de la tabla */
+    border: 1px solid rgba(0, 0, 0, 0.4); /* Borde suave */
+}
+td {
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+}
+
+
+td {
+    
+    width: 25%; /* Ancho de cada celda */
+    text-align: left; /* Centrar el texto */
+    vertical-align: middle; /* Centrar verticalmente el texto */
+    border: 1px solid #ccc; /* Borde más sutil para asemejar a Excel */
+    font-weight: bold; /* Texto en negrita */
+    padding: 2px; /* Espaciado interno de las celdas */
+    height: 20px; /* Altura compacta */
+    white-space: nowrap; /* Evitar salto de línea dentro de las celdas */
+}
+
+/* Colores de las celdas */
+.rojo { background-color: red; color: black; }
+.blanco { background-color: white; color: black; }
+.verde { background-color: green; color: black; }
+.gris { background-color: gray; color: black; }
+.cafe { background-color: brown; color: black; }
+.azul { background-color: blue; color: black; }
+.violeta { background-color: violet; color: black; }
+.rosado { background-color: pink; color: black; }
+.amarillo { background-color: yellow; color: black; }
+.turquesa { background-color: turquoise; color: black; }
+.naranjo { background-color: orange; color: black; }
+.purpura { background-color: purple; color: black; }
+.negro { background-color: black; color: white; }

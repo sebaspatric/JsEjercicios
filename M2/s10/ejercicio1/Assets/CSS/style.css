@@ -1,0 +1,9 @@
+#caja1,#botones {
+    margin-top: 5%;
+}
+#caja1, #caja2 {
+    text-align: center;
+}
+#caja2 {   
+    display: none;
+}

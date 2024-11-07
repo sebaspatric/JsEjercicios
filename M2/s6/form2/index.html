@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroVia Express</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00264c;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AeroVia Express</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-text-light" href="#">Ofertas y destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Mis viajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Centro de ayuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Estado de vuelo</a>
+                    </li>
+                </ul>
+                <button class="btn btn-login  rounded-pill px-4" type="button">Iniciar sesión</button>
+            </div>
+        </div>
+    </nav>
+ 
+     <!-- Banner Section -->
+     <div class="container-fluid bg-light py-4">
+        <div class="row align-items-stretch">
+            <div class="col-md-8 d-flex flex-column justify-content-center text-dark bg-custom-green p-3 ">
+                <h2>¡Vacaciones de verano!</h2>
+                <p>Vuela por Chile y Sudamérica con hasta 40% de descuento.</p>
+                <p>Encuentra paquetes, hoteles, seguros y arriendo de autos en AeroVia Express.</p>
+                <a href="#" >Compra aquí</a> <!-- Enlace de compra aquí -->
+            </div>
+            <div class="col-md-4 p-0">
+                <img src="Assets/IMG/polynesia.jpg" class="img-fluid h-100" style="object-fit: cover;" alt="Vacaciones de verano">
+            </div>
+        </div>
+    </div>
+    
+ <!-- Contenedor del formulario -->
+<div class="container mt-5">
+    <div class="card shadow p-4 formulario">
+  
+
+<!-- Opciones superiores -->
+
+
+        <!-- Opciones superiores como botones -->
+        <div class="d-flex justify-content-start mb-3">
+        <div class="btn-group mb-3 "  role="group" aria-label="Opciones de viaje">
+            <button type="button" class="btn btn-outline-primary border border-1">Vuelos</button>
+            <button type="button" class="btn btn-outline-primary border border-1">Paquetes</button>
+            <button type="button" class="btn btn-outline-primary border border-1">Hoteles</button>
+            <button type="button" class="btn btn-outline-primary border border-1">Autos</button>
+            <button type="button" class="btn btn-outline-primary border border-1">Seguros</button>
+            <button type="button" class="btn btn-outline-primary border border-1">Upgrade</button>
+        </div>
+        </div>
+
+        <!-- Formulario  -->
+        <form>
+        <!-- Opciones de Viaje -->
+        <div class="row mb-3">
+            <div class="col-md-2">
+                <!-- <label for="tipoViaje" class="form-label">Tipo de Viaje</label> -->
+                <select class="form-select sin-borde" id="tipoViaje" required>
+                    <option value="ida-y-vuelta" selected>Ida y Vuelta</option>
+                    <option value="solo-ida">Solo Ida</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <!-- <label for="clase" class="form-label">Clase</label> -->
+                
+                <select class="form-select sin-borde" id="clase" required>
+                    <option value="economy" selected>Economy</option>
+                    <option value="premium-economy">Premium Economy</option>
+                    <option value="business">Business</option>
+                    <option value="first-class">Primera Clase</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <!-- <label for="pasajeros" class="form-label">Pasajeros</label> -->
+                <select class="form-select sin-borde" id="pasajeros" required>
+                    <option value="1" selected>1 pasajero</option>
+                    <option value="2">2 pasajeros</option>
+                    <option value="3">3 pasajeros</option>
+                    <option value="4">4 pasajeros</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Formulario de búsqueda -->
+       
+        <div class="row g-3 mb-3">
+            <!-- Origen -->
+            <div class="col-md-1">
+                <input type="text" class="form-control" id="origen" placeholder="Origen" required>
+            </div>
+    
+            <!-- Destino -->
+            <div class="col-md-1">
+                <input type="text" class="form-control" id="destino" placeholder="Destino" required>
+            </div>
+            <!-- Fecha de Ida -->
+            <div class="col-md-2 ">
+                <input type="text" class="form-control" id="fechaIda" placeholder="fechaIda" required>
+            </div>
+    
+            <!-- Fecha de Ida -->
+            <div class="col-md-2 ">
+                <input type="date" class="form-control" id="fechaIda" required>
+            </div>
+    
+            <!-- Fecha de Vuelta (Bloqueada) -->
+            <div class="col-md-2 d-flex align-items-center">
+                <input type="text" class="form-control" id="fechaVuelta" placeholder="fechaVuelta" required>
+            </div>
+            <!-- Fecha de Vuelta (Bloqueada) -->
+            <div class="col-md-2 d-flex align-items-center">
+                <input type="date" class="form-control" id="fechaVuelta" disabled>
+            </div>
+    
+            <!-- Botón Buscar -->
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-danger rounded">Buscar</button>
+            </div>
+        </div>
+        </form>
+        <br>
+    </div>
+</div>
+
+
+<footer>
+
+    <div class="container-fluid text-center py-4">
+        <p>�� 2021 AeroVia Express. Todos los derechos reservados.</p>
+    </div>
+ 
+
+</footer>
+
+   
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

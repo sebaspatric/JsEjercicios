@@ -1,0 +1,36 @@
+
+    /*
+div{
+    background-color: red;
+    }
+   
+   div{
+    background-color: yellow;
+    }
+        
+    */
+    /*
+    #division{
+        color: blue;
+        }
+        .contenedor{
+        color: red;
+        }
+        div{
+        color: green;
+        }    
+    */
+div{
+    height: 200px;
+    width: 300px;
+    display: inline-block;
+    }
+div, a {
+    background-color: chartreuse;
+    }
+#division{
+margin: 10%;
+padding: 10%;
+border-color: black;
+border-style: solid;
+}
