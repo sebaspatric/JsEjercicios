@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Patagonia Travel</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Patagonia Travel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">¿Qué actividad le gustaría hacer?</h2>
+        
+        <div class="form-group text-center">
+            <label for="actividades">Actividades:</label>
+            <select id="actividades" class="form-control d-inline-block w-auto" onchange="cambiarActividad()">
+                <option value="natacion">Natación</option>
+                <option value="trekking">Trekking</option>
+                <option value="ferry">Ferry</option>
+            </select>
+        </div>
+
+        <!-- Tarjeta de actividad -->
+        <div class="card mb-4">
+            <div id="imagenActividad" class="card-img-top position-relative" onmouseenter="mostrarOverlay()" onmouseleave="ocultarOverlay()">
+                <div id="overlay" class="overlay-content">
+                    <h5 id="tituloOverlay" class="text-white"></h5>
+                    <p id="ubicacionOverlay" class="text-white"></p>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 id="tituloActividad" class="card-title">Natación</h5>
+                <!--<p id="ubicacionActividad" class="text-muted"><i class="fas fa-map-marker-alt"></i></p>-->
+                <p id="descripcionActividad">Deporte o ejercicio que consiste en nadar en las pruebas de natación...</p>
+                <a href="#" class="btn btn-primary">Conocer más</a>
+                <a href="#" class="btn btn-outline-primary">Agendar actividad</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>

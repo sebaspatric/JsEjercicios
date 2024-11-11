@@ -1,0 +1,64 @@
+/* styles.css */
+
+/* Contenedor de imagen con overlay 
+
+#imagenActividad {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}*/
+
+
+/* Estilo para el overlay 
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: none;     
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: opacity 0.3s;
+}*/
+
+
+/* Mostrar el overlay al hacer hover
+#imagenActividad:hover .overlay-content {
+    display: flex;
+}
+
+*/
+
+
+/* Overlay */
+.overlay-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#imagenActividad {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+}
+
+.overlay-content h5, .overlay-content p {
+    margin: 0;
+}

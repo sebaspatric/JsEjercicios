@@ -1,0 +1,29 @@
+
+
+/* Overlay */
+.overlay-content {
+    display: none;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#imagenActividad {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+}
+
+.overlay-content h5, .overlay-content p {
+    margin: 0;
+}
