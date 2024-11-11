@@ -1,0 +1,77 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.calculator {
+  border: 1px solid #ccc;
+  background-color: rgb(226, 224, 224);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  /*padding: 10px;*/
+  
+}
+
+.calculator-screen {
+  width: 100%;
+  height: 80px;
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
+  font-size: 4rem;
+
+  /*
+  margin-bottom: 20px;
+  padding: 5px;
+
+  */
+    
+}
+::placeholder {
+  color: white;
+  
+}
+button {
+  height: 60px;
+  font-size: 2rem!important;
+  border-radius: 5px;
+  background-color: #f1f1f1; /* Fondo gris claro para los botones numéricos */
+  color: #333; /* Color de texto oscuro */
+  border: 0px solid #000; 
+  /*  border: 0px solid #000;2px de grosor, color negro */
+}
+.operator {
+  background-color: #4da6ff; /* Azul para los operadores */
+  color: white;
+}
+button:active {
+  border: 2px solid #0000FF; /* Borde azul cuando se presiona */
+}
+
+.equal-sign {
+  height: 98%;
+  grid-area: 2 / 4 / 6 / 5;
+  background-color: #f1f1f1;
+  color: #252525;
+}
+.all-clear {
+  background-color: #ff6666; /* Rojo para el botón AC */
+  color: white;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}

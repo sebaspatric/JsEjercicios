@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="screen" class="calculator-screen" value="0" disabled />
+
+    <div class="calculator-keys">
+      <button type="button" id="add" onclick="getValue('add')" class="operator" value="+">+</button>
+      <button type="button" id="subtract" onclick="getValue('subtract')" class="operator" value="-">-</button>
+   
+      <button type="button" id="*" onclick="getValue('*')" class="operator" value="*">*</button>
+      <button type="button" id="divide" onclick="getValue('divide')" class="operator" value="/">/</button>
+
+      <button type="button" id="7" onclick="getValue('7')" value="7">7</button>
+      <button type="button" id="8" onclick="getValue('8')" value="8">8</button>
+      <button type="button" id="9" onclick="getValue('9')" value="9">9</button>
+     
+
+      <button type="button" id="4" onclick="getValue('4')" value="4">4</button>
+      <button type="button" id="5" onclick="getValue('5')" value="5">5</button>
+      <button type="button" id="6" onclick="getValue('6')" value="6">6</button>
+      <button type="button" onclick="solve()" class="equal-sign">=</button>
+
+      <button type="button" id="1" onclick="getValue('1')" value="1">1</button>
+      <button type="button" id="2" onclick="getValue('2')" value="2">2</button>
+      <button type="button" id="3" onclick="getValue('3')" value="3">3</button>
+      <button type="button" id="0" onclick="getZero()" value="0">0</button>
+
+      <button type="button" onclick="addDecimal()" value=".">.</button>
+      <button type="button" onclick="clearScreen()" class="all-clear">AC</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
