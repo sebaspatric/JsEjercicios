@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú de Comida Italiana Vegana</title>
+
+    <!-- librería bootstrap para estilos css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- estilos css -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <!-- Sección de Bebidas -->
+      <div class="menu-section">
+        <h3>Elige algo para beber</h3>
+        <p>Disfruta de nuestra clásica selección de tragos.</p>
+        <div class="list-group">
+          <div
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <input
+              type="checkbox"
+              class="form-check-input me-2"
+              onchange="toggleItem('Martini', 2550)"
+            />
+            Martini
+            <span class="badge bg-primary rounded-pill">$2,550</span>
+          </div>
+          <div
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <input
+              type="checkbox"
+              class="form-check-input me-2"
+              onchange="toggleItem('Cappuccino', 1370)"
+            />
+            Cappuccino
+            <span class="badge bg-primary rounded-pill">$1,370</span>
+          </div>
+          <div
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <input
+              type="checkbox"
+              class="form-check-input me-2"
+              onchange="toggleItem('Latte', 1350)"
+            />
+            Latte
+            <span class="badge bg-primary rounded-pill">$1,350</span>
+          </div>
+          <div
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <input
+              type="checkbox"
+              class="form-check-input me-2"
+              onchange="toggleItem('Mojito', 2290)"
+            />
+            Mojito
+            <span class="badge bg-primary rounded-pill">$2,290</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Comida -->
+      <div class="menu-section  mt-5">
+        <h3>Menú</h3>
+        <p>Disfruta de la mejor cocina italiana.</p>
+        <div class="list-group">
+          <!-- Insalata de riso -->
+          <div class="list-group-item menu-item-container">
+            <div class="menu-item-content">
+              <input
+                type="checkbox"
+                class="form-check-input me-2"
+                onchange="toggleItem('Insalata de riso', 6750)"
+              />
+              <div class="fw-bold">Insalata de riso</div>
+              <p>
+                Una ensalada refrescante y fácil de preparar, perfecta para el
+                verano. Incluye una mezcla de arroz y vegetales frescos.
+              </p>
+              <span class="badge bg-success rounded-pill menu-item-price"
+                >$6,750</span
+              >
+            </div>
+
+            <div class="menu-img">
+                <img
+                  src="https://img.freepik.com/fotos-premium/insalata-di-riso-salada-arroz-italiana_762785-131797.jpg"
+                  alt="Imagen de Insalata de riso"
+                  class=" menu-item-image"
+                />
+            </div>
+            
+
+          </div>
+
+          <!-- Insalata ai cipollotti -->
+          <div class="list-group-item menu-item-container">
+            <div class="menu-item-content">
+              <input
+                type="checkbox"
+                class="form-check-input me-2"
+                onchange="toggleItem('Insalata ai cipollotti', 5990)"
+              />
+              <div class="fw-bold">Insalata ai cipollotti</div>
+              <p>
+                Ensalada con cebolletas frescas, perfecta para acompañar con
+                otros platos. Ideal para quienes buscan un sabor suave y
+                delicado.
+              </p>
+              <span class="badge bg-success rounded-pill menu-item-price"
+                >$5,990</span
+              >
+            </div>
+            <img
+              src="https://img.freepik.com/foto-gratis/ensalada-sabrosa-verduras_23-2148515490.jpg"
+              alt="Imagen de Insalata ai cipollotti"
+              class="img-thumbnail menu-item-image"
+            />
+          </div>
+
+          <!-- Insalata caprese -->
+          <div class="list-group-item menu-item-container">
+            <div class="menu-item-content">
+              <input
+                type="checkbox"
+                class="form-check-input me-2"
+                onchange="toggleItem('Insalata caprese', 8250)"
+              />
+              <div class="fw-bold">Insalata caprese</div>
+              <p>
+                Un clásico italiano de la región de Campania. Tomates frescos,
+                albahaca y mozzarella se combinan en un plato delicioso y
+                saludable.
+              </p>
+              <span class="badge bg-success rounded-pill menu-item-price"
+                >$8,250</span
+              >
+            </div>
+
+            <img
+              src="https://img.freepik.com/fotos-premium/capture-esencia-insalata-caprese-fotografia-comida-deliciosa_442337-16299.jpg"
+              alt="Imagen de Insalata caprese"
+              class="img-thumbnail menu-item-image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de la Cuenta -->
+      <div class=" menu-section mt-5">
+        <h3>Cuenta</h3>
+        <p>Esperamos que disfrute de su comida ¡Ciao!</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody id="order-summary">
+            <!-- Resumen de la orden -->
+             <!-- Aquí se agregarán los items seleccionados -->
+              <!-- Se agregarán los items seleccionados 
+               <td>1</td>
+               <td>$0.00</td>
+
+               -->
+               
+               
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Total</th>
+              <th id="total-price">$0.00</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+
+    <!-- Enlace al archivo JavaScript externo -->
+  </body>
+</html>

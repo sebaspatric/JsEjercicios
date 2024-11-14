@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Aquí enlazamos el archivo CSS -->    <title>Menú de Comida Italiana Vegana</title>
+
+
+ 
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h3>Menú</h3>
+        <p>Disfruta de la mejor cocina italiana.</p>
+        <div class="list-group">
+
+              <!-- Insalata de riso -->
+              <div class="list-group-item menu-item-container">
+                <input type="checkbox" class="form-check-input me-2" onchange="toggleItem('Insalata de riso', 6750)">
+                <div class="menu-item-content">
+                    <div class="fw-bold">Insalata de riso</div>
+                    <p>Una ensalada refrescante y fácil de preparar, perfecta para el verano. Incluye una mezcla de arroz y vegetales frescos.</p>
+                    <span class="badge bg-success rounded-pill menu-item-price">$6,750</span>
+                </div>
+                <div class="menu-img">
+                    <img src="https://img.freepik.com/fotos-premium/insalata-di-riso-salada-arroz-italiana_762785-131797.jpg" alt="Imagen de Insalata de riso" class="img-thumbnail menu-item-image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+/*
+
+
+*/
+body {
+    background-color: #f0f8ff; /* Fondo celeste claro */
+}
+
+/* Estilo del contenedor principal */
+.container {
+    max-width: 800px; /* Limitar el tamaño máximo del formulario */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 1rem; /* Espaciado dentro del contenedor */
+}
+
+/*************************************************************
+ Estilo del formulario */
+
+ #registerForm {
+  padding: 1.5rem; /* Añade algo de padding para mejorar el aspecto */
+  border-radius: 0.5rem; /* Bordes redondeados para un efecto más suave */
+}
+
+.titulo-formulario {
+  font-size: 3.5rem; /* Aumentar tamaño de fuente */
+  font-weight: normal;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Ajusta el espaciado entre las letras */
+
+
+  /* Aplicación del gradiente en el texto */
+  background: linear-gradient(
+    45deg,
+    hsl(359, 100%, 65%),
+    #6323f9
+  ); /* Gradiente ajustado */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-group {
+  margin-bottom: 8%; /* Ajusta este valor para más o menos espacio arriba */
+}
+
+
+.form-label {
+  color: #6a1b9a;
+  font-weight: bold;
+  display: block; /* Asegura que la etiqueta ocupe toda la línea */
+  margin-bottom: 0.2rem; /* Reduce el espacio debajo de la etiqueta */
+}
+
+.custom-input {
+  border: none;
+  border-bottom: 2px solid #6a1b9a;
+  border-radius: 0;
+  outline: none;
+  padding-bottom: 5px; /* Reduce el espacio interno inferior del input */
+}
+
+.custom-input:focus {
+  box-shadow: none;
+  border-bottom: 2px solid #6a1b9a;
+}
+
+.btn-enviar {
+  background: linear-gradient(45deg, #6a1b9a, #ff6b6b);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 4rem;
+  font-weight: normal;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Ajusta el espaciado entre las letras */
+}
+
+.btn-enviar:hover {
+  background: linear-gradient(45deg, #ff6b6b, #b23afc);
+}
+
+
+/*****************************************************
+ Tarjeta de presentacion*/
+
+
+#profileCard {
+    width: 75%; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+ /*****************************************************
+ perfil*/
+.profile-side {
+    background: linear-gradient(45deg, #ff4e50, #6323f9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.card-body {
+    padding: 1.5rem;
+}
+
+ /*****************************************************
+ informaacion*/
+.card-title {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.about {
+    border-bottom: 1px solid #e0e0e0;
+    
+}
+/* Asegurar que la tarjeta tenga un buen margen */
+#profileCard {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Para que no se desborde */
+}
+
+/* Ajuste en la imagen del perfil */
+.profile-side img {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Ajuste de espaciado para las columnas */
+.card-body .row {
+    margin-top: 1rem;
+}
+
+/* Subrayado para el texto "Sobre Mi" */
+.card-body u {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Aplicar el estilo a los elementos con esos ID */
+#displayEmail, #displayPhone, #displayAbout {
+    padding-bottom: 2px; /* Espacio debajo del texto */
+    display: inline-block; /* Asegura que el span respete el formato en línea */
+    color: #808080; /* Gris oscuro */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra suave en el texto */
+}

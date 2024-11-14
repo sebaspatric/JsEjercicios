@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <div class="container my-5">
+        <h2 class="text-center  titulo-formulario">Inscríbete</h2>
+        <form id="registerForm" class="my-4">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control custom-input bg-light" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email" class="form-label">Correo</label>
+                    <input type="email" class="form-control custom-input bg-light" id="email" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="job" class="form-label">Trabajo</label>
+                    <input type="text" class="form-control custom-input bg-light" id="job">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control custom-input bg-light" id="phone">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="about" class="form-label ">Sobre ti</label>
+                <textarea class="form-control custom-input bg-light" id="about"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary btn-enviar" onclick="registerUser()">Enviar</button>
+        </form>
+        <div id="profileCard" class="card mt-5" style="display: block;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 profile-side">
+                        <div class="text-center py-4">
+                            <img src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659652_1280.png" class="rounded-circle mb-3" alt="Avatar">
+                            <h5 id="displayName" class="text-white">nombre</h5>
+                            <p id="displayJob" class="text-white">trabajo</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Información</h5>
+                            <div class="row">
+                                <!-- Columna izquierda: Email -->
+                                <div class="col-12 col-md-6 mb-3">
+                                    <p><strong>Email:</strong></p>
+                                    <span id="displayEmail"></span>
+                                </div>
+                                <!-- Columna derecha: Teléfono -->
+                                <div class="col-12 col-md-6 mb-3">
+                                    <p><strong>Phone:</strong> </p>
+                                    <span id="displayPhone"></span>
+                                </div>
+                            </div>
+                            <!-- Texto "Sobre Mi" subrayado -->
+                            <p class="about"><strong>Sobre Mi:</strong></p>
+                            <p id="displayAbout"></p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

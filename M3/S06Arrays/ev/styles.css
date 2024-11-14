@@ -1,0 +1,72 @@
+/*
+
+
+
+
+
+
+*/
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+body {
+    background: linear-gradient(to right, #008C45, #ffffff, #CD212A); /* Degradado verde, blanco, rojo */
+}
+
+.container {
+    max-width: 600px; /* Opcional: ajusta el ancho máximo del contenedor */
+}
+
+/* Estilo para los contenedores de las secciones de bebida y comida */
+.menu-section {
+    margin: 20px 0; /* Margen vertical para separar las secciones */
+    padding: 20px; /* Espacio interno dentro de cada sección */
+    background-color: white; /* Fondo blanco para resaltar cada sección */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para dar efecto de elevación */
+}
+
+
+.menu-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-item-content {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+.menu-img {
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+}
+
+
+.menu-item-image {
+    width: 80px; /* Ajusta el tamaño según lo que necesites */
+    height: 80px; /* Debe ser igual al width para que sea circular */
+    object-fit: cover; /* Asegura que la imagen ocupe todo el contenedor sin deformarse */
+    border-radius: 50%; /* Hace que la imagen sea completamente redonda */
+    border: 2px solid white;
+}
+
+
+
+
+.menu-item-price {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.table {
+    text-align: center; /* Centra el texto horizontalmente en toda la tabla */
+}
+
+.table th, .table td {
+    vertical-align: middle; /* Centra el contenido verticalmente */
+}
