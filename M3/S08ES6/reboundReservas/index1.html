@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserva una Hora</title>
+    <link rel="stylesheet" href="styles1.css" />
+     <!-- Archivo JavaScript personalizado -->
+     <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>RESERVA UNA HORA</h2>
+      <form action="#" method="post" id="reservaForm">
+        <div class="name-container">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="nombre"
+              required
+            />
+          </div>
+          <div>
+            <label for="apellido">Apellido</label>
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              placeholder="apellido"
+              required
+            />
+          </div>
+        </div>
+        <label for="correo"
+          >Correo <span class="small-text">(te notificaremos aquí)</span></label
+        >
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="tu@ejemplo.com"
+          required
+        />
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="0" required />
+
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="fecha" required />
+
+        <div class="button-container">
+          <input type="submit" value="Enviar" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

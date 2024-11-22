@@ -1,0 +1,97 @@
+body {
+    background-color: #2e4a47;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #1c1c1c;
+    padding: 6%;
+    border-radius: 8px;
+    max-width: 500px;
+    
+}
+
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 3em; /* Aumenta el espacio entre el título y el formulario */
+    font-size: 1.5em; 
+    text-transform: uppercase;
+}
+.form-container label {
+    font-size: 0.9em;
+    text-align: left;
+    color: #e0e0e0;
+}
+
+.form-control {
+    background-color: #333;
+    border: 1px solid #fff;
+}
+
+.form-container input::placeholder {
+    color:  #e0e0e0;  /* El color del placeholder será blanco */
+    opacity: 0.5; /* Asegura que sea completamente opaco */
+}
+
+
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="number"],
+.form-container input[type="date"] {
+    
+    width: calc(100%);
+    color: #fff;
+    transition: border-color 0.3s ease; /* Transición para el borde */
+}
+
+/* Asegurar que el fondo no cambie al escribir */
+.form-control:focus,
+.form-control:valid,
+.form-control:invalid {
+    background-color: #333 !important; /* Mantener fondo constante */
+}
+/* Elimina botones para navegadores no WebKit 
+input[type="number"] {
+    appearance: textfield; 
+}
+
+*/
+.form-control:focus {
+    border-color: #00b894;
+    box-shadow: 0 0 0 0.25rem rgba(0, 184, 148, 0.25);
+}
+
+.btn-custom {
+    background-color: transparent;
+    border: 2px solid #00b894;
+    color: #00b894;
+    
+    transition: box-shadow 0.3s ease, color 0.3s ease; /* Suaviza la transición */
+}
+
+.btn-custom:hover {
+    /*background-color: #00b894;*/ 
+    color: #fff;
+    border: 2px solid #00b894;
+    box-shadow: 0 0 1px 2px #00b894; /* Agrega un brillo verde */
+
+}
+.form-container .small-text {
+    font-size: 0.8em;
+    color: #9e9e9e;
+   ;
+}
+
+
+
+
+
+
+
+
