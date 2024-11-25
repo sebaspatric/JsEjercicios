@@ -1,0 +1,46 @@
+/* Contenedor del logo */
+.logo-container {
+    display: inline-block;
+    background: white; /* Fondo blanco */
+    border-radius: 50%; /* Forma circular */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 50px; /* Tamaño fijo del contenedor */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ícono de la carpeta */
+  .icon {
+    width: 32px; /* Tamaño del ícono */
+    height: 32px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTriPgeB5vdybADYgZgzvJ4TLUpLCKymO7xUZfX7oUs6WiBOof_'); /* URL del ícono */
+    background-repeat: no-repeat;
+    background-size: contain; /* Ajustar el tamaño dentro del contenedor */
+    background-position: center; /* Centrar la imagen dentro del círculo */
+  }
+  
+  
+  
+  /* Texto con degradado */
+  .text-gradient {
+    background: linear-gradient(90deg, #ff5e92, #ff8555);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .card {
+    border: none;
+  }
+  
+  #result {
+    color: #ff5e92;
+    font-size: 1.2rem;
+  }
+  

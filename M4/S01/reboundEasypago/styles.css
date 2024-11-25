@@ -1,0 +1,136 @@
+
+
+/* Estilo del título principal */
+/* Estilo del título principal */
+h1, #result {
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+    background: linear-gradient(to left, #7702add5, #f33131); /* Nuevo degradado: de rosa a naranja */
+    -webkit-background-clip: text; /* Clipa el fondo del texto */
+    -webkit-text-fill-color: transparent; /* Hace que solo el degradado sea visible */
+    margin: 0; /* Quita el espacio extra */
+    text-transform: uppercase; /* Hace que el texto esté en mayúsculas */
+}
+
+#result {
+    font-size: 1.5rem; /* Tamaño de la fuente similar al del título */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Contenedor del logo (carpeta) */
+.logo-container {
+    display: inline-flex;
+    align-items: center; /* Alineación vertical */
+    justify-content: center;
+    padding: 0px; /* Sin espaciado adicional */
+    height: 3em; /* Altura relativa al tamaño del título */
+    width: 3em; /* Igual al alto para mantener la forma circular */
+}
+
+/* Ícono de la carpeta */
+.icon {
+    width: 100%; /* Tamaño del ícono relativo al tamaño de la fuente */
+    height: 100%; /* Igual al ancho */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTriPgeB5vdybADYgZgzvJ4TLUpLCKymO7xUZfX7oUs6WiBOof_'); /* URL del ícono */
+    background-repeat: no-repeat;
+    background-size: contain; /* Ajusta el tamaño dentro del contenedor */
+    background-position: center; /* Centra la imagen dentro del círculo */
+}
+/* Asegurar que el row tenga la misma altura para todas las columnas */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Hace que todas las columnas tengan la misma altura */
+}
+
+/* Contenedor de cada columna */
+.col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Asegura que los elementos estén alineados al inicio */
+    height: 100%; /* Hace que cada columna ocupe el 100% de la altura del row */
+    padding-bottom: 1rem; /* Ajusta el espaciado inferior */
+}
+/* Estilo del texto de las etiquetas de entrada */
+/* Estilo del label */
+label {
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    color: #7b4ecb;
+    font-weight: 500;
+    margin-bottom: 0.5rem; /* Espaciado entre la etiqueta y el input */
+    display: block;
+    flex-grow: 0; /* Impide que el label crezca y ocupe más espacio */
+    flex-shrink: 0; /* Impide que el label se encoja */
+}
+
+
+
+
+
+/* Botón estilo */
+/* Botón estilo */
+button {
+    background: linear-gradient(to left, #400c99, #ce124e); /* Degradado en el botón */
+    border: none; /* Elimina el borde */
+    border-radius: 0 !important; /* Anula cualquier borde redondeado de Bootstrap */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #7b4ecb, #ff5e92); /* Inversión del degradado al pasar el cursor */
+}
+
+/* Estilo de los labels */
+
+
+
+/* Alineación y estilo para los inputs */
+input.form-control {
+    border-radius: 0; /* Anula cualquier borde redondeado de */
+    border: none; /* Elimina el borde predeterminado */
+    border-bottom: 2px solid #7b4ecb; /* Solo borde inferior */
+    margin-bottom: 1rem; /* Espaciado entre los inputs */
+    width: 100%; /* Asegura que el input ocupe todo el ancho */
+    padding: 10px; /* Ajusta el tamaño del texto */
+    font-size: 1rem;
+    box-sizing: border-box; /* Asegura que el padding no haga que el input se desborde */
+    margin-top: 0.5rem; /* Espaciado superior del input */
+    align-self: flex-end; /* Coloca el input al fondo de la columna */
+
+  }
+
+  input.form-control:focus {
+    border-bottom: 2px solid #ff5e92; /* Cambia el color cuando está enfocado */
+    outline: none; /* Elimina el contorno de enfoque */
+  }
+
+/* Alineación y estilo para los labels */
+
+
+/* Ajustar el contenedor de la tarjeta */
+
+
+/* Contenedor de la tarjeta con el contenido */
+.card {
+    width: 100%; /* La tarjeta ocupa el 100% del ancho disponible */
+    max-width: 900px; /* Máximo ancho de la tarjeta */
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
+    padding: 20px; /* Espaciado dentro de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Alineación y estilo para los labels */
+.card p-4 {
+    padding: 0px; /* Espaciado alrededor del formulario */
+}
+
+

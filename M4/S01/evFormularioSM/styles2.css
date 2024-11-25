@@ -1,0 +1,117 @@
+/* estilos.css */
+
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* Título del formulario */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Contenedor para el botón */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para los campos del formulario */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 14px;
+}
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+/* Estilo básico del select */
+form select.form-control {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 10px;
+    color: #333;
+
+    width: 100%;
+    position: relative;
+}
+
+
+
+/* Cambiar el borde y agregar sombra al hacer foco
+form select.form-control:focus {
+    border-color: white; 
+    box-shadow: 0 0 5px white;
+    outline: none;
+    background-color: #333;
+    color: white !important;
+} */
+
+
+
+
+
+/* Estilo cuando se pasa el mouse sobre el select 
+.custom-select:hover {
+    border-color: #007bff;
+}*/
+
+
+/* Estilo general de los botones */
+.btn {
+    border-radius: 50px;
+}
+
+/* Sección del formulario */
+.form-container {
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Personalizar el fondo del dropdown */
+.select2-container .select2-dropdown {
+    background-color: #333; /* Fondo gris para el dropdown */
+    border: 1px solid #ccc; /* Borde gris claro para el dropdown */
+    color: #ffffff;
+}
+/* Estilo para el texto placeholder -- Selecciona un motivo -- */
+.select2-selection__placeholder {
+    color: #B0B0B0 !important; /* Gris claro */
+    font-style: italic; /* Opcional: para darle un estilo de "instrucción" */
+}
+
+
+
