@@ -1,0 +1,80 @@
+/* Fondo degradado para toda la página */
+html, body {
+    background: linear-gradient(to right, #008000, #FF0000); /* Degradado de verde a rojo */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes por defecto */
+}
+
+/* Estilo para el contenedor ovalado gris claro de los títulos */
+.oval-title-container {
+    background-color: #f0f0f0;  /* Gris claro */
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;  /* Hace que el contenedor tome solo el tamaño necesario */
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Estilo para el contenedor que envuelve el input y el botón en forma de óvalo */
+.input-oval-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    border: 0.5px solid #f3eaea;
+    padding: 5px;
+    background-color: #fff;
+    width: 100%;
+}
+
+/* Estilo para el input */
+.input-oval {
+    border-radius: 50px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    flex-basis: 48%;  /* El input ocupará el espacio disponible */
+    ;
+}
+
+/* Estilo para el botón */
+.btn-oval {
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    flex-basis: 48%;
+}
+
+/* Cambio de estilo al seleccionar el input */
+.input-oval:focus {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.3);  /* Resalta el contorno del input al seleccionarlo */
+}
+/* Alineación de los elementos del resumen de pedido */
+.d-flex.justify-content-between {
+    display: flex;
+    justify-content: space-between; /* Esto asegura que el nombre esté a la izquierda y el precio a la derecha */
+    align-items: center;  /* Alineación vertical */
+    margin-bottom: 10px;   /* Espacio entre los elementos */
+    border-bottom: 1px solid #ccc; /* Línea horizontal debajo de cada sección */
+    padding-bottom: 10px; /* Espacio entre el texto y la línea */
+
+
+  }
+/* Asegura que el nombre esté alineado a la izquierda */
+.d-flex.justify-content-between p {
+    margin: 0; /* Elimina el margen por defecto del p */
+    text-align: left; /* Alinea el texto a la izquierda para el nombre */
+    flex-grow: 1; /* Esto permite que el nombre ocupe todo el espacio disponible */
+    display: flex;
+    justify-content: space-between;
+  }
+
+/* Alineación del precio a la derecha */
+.precio {
+  text-align: right;   /* Alinea el precio a la derecha */
+  margin-left: 10px; /* Asegura un pequeño espacio entre el nombre y el precio */
+}
+/* Espaciado adicional entre los elementos de la lista de ingredientes */
