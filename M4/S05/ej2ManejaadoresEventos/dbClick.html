@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <div id="d1">Primer elemento de referencia.</div>
+      <div id="d2">Segundo elemento de referencia.</div>
+      </center>
+     
+  </body>
+
+  <style>
+
+  </style>
+   <script>
+    $("#d1").dblclick(function() {
+    $(this).css({
+    "fontSize": "larger",
+    "color": "orange"
+    });
+    })
+    $("#d2").dblclick(function() {
+    $(this).css("background-color", "yellow");
+    })
+   </script>
+   </html>
+   
+</html>

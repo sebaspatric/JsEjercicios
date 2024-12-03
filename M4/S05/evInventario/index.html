@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock de Productos</title>
+    <!-- Vinculación con Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vinculación con Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Vinculación con el archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="diamond.png" alt="Diamante" class="logo-diamante">
+            Ice Gear
+            <img src="diamond.png" alt="Diamante" class="logo-diamante">
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="text-center text-danger mb-5">Stock de productos</h1>
+        
+        <!-- Contenedor para los tres recuadros -->
+        <div class="d-flex flex-column align-items-center">           
+             <!-- Recuadro 1: En esta tienda -->
+            <div class="col-md-5 mb-3 cuadro-busqueda" id="cuadro-esta-tienda">
+                <div class="input-group ">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text texto-rojo">En esta tienda</span>
+                    </div >
+                    <div class="input-wrapper">
+                        <input type="text" class="form-control texto-gris" placeholder="Buscar en esta tienda">
+                    </div>
+                   
+                    <button class="btn btn-transparente lupa-buscar" disabled>
+                        <i class="fas fa-search lupa-roja"></i> <!-- Ícono de lupa -->
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Recuadro 2: En otras tiendas -->
+            <div class="col-md-5 mb-3 cuadro-busqueda" id="cuadro-otras-tiendas">
+                <div class="input-group ">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text texto-rojo">En otras tiendas</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" class="form-control texto-gris" placeholder="Buscar en otras tiendas">
+                    </div>
+
+                    <button class="btn btn-transparente lupa-buscar " disabled>
+                        <i class="fas fa-search lupa-roja"></i> <!-- Ícono de lupa -->
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Recuadro 3: Online -->
+            <div class="col-md-5 mb-3 cuadro-busqueda" id="cuadro-online">
+                <div class="input-group ">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text texto-rojo">Online</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" class="form-control texto-gris" placeholder="Buscar online">
+                    </div>
+                    
+                    <button class="btn btn-transparente lupa-buscar" disabled>
+                        <i class="fas fa-search lupa-roja"></i> <!-- Ícono de lupa -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
