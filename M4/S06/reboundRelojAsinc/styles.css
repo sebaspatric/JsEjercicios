@@ -1,0 +1,26 @@
+.timezone-card {
+    width: 100%; /* Ocupa el ancho completo disponible */
+    max-width: 500px; /* Define un ancho máximo */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Espaciado vertical entre tarjetas */
+    border: 1px solid #ddd; /* Bordes suaves */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    background-color: white; /* Fondo blanco */
+}
+
+.timezone-card img {
+    width: 50px; /* Tamaño de la bandera */
+    height: auto; /* Mantiene la proporción */
+    margin-right: 15px; /* Espaciado a la derecha de la bandera */
+}
+
+.timezone-card div {
+    text-align: center; /* Centra el contenido del texto */
+    flex-grow: 1; /* Hace que este contenedor ocupe el espacio restante */
+}
+
+.timezone-card .fw-bold {
+    font-size: 1.25rem; /* Tamaño más grande para la hora */
+    margin-bottom: 5px; /* Espaciado entre hora y ciudad */
+}
