@@ -1,0 +1,129 @@
+Tabla,Columna,Puede ser Nulo,Tipo de Dato
+actor,actor_id,NO,integer
+actor,first_name,NO,character varying
+actor,last_name,NO,character varying
+actor,last_update,NO,timestamp without time zone
+actor_info,actor_id,YES,integer
+actor_info,first_name,YES,character varying
+actor_info,last_name,YES,character varying
+actor_info,film_info,YES,text
+address,address_id,NO,integer
+address,address,NO,character varying
+address,address2,YES,character varying
+address,district,NO,character varying
+address,city_id,NO,smallint
+address,postal_code,YES,character varying
+address,phone,NO,character varying
+address,last_update,NO,timestamp without time zone
+category,category_id,NO,integer
+category,name,NO,character varying
+category,last_update,NO,timestamp without time zone
+city,city_id,NO,integer
+city,city,NO,character varying
+city,country_id,NO,smallint
+city,last_update,NO,timestamp without time zone
+country,country_id,NO,integer
+country,country,NO,character varying
+country,last_update,NO,timestamp without time zone
+customer,customer_id,NO,integer
+customer,store_id,NO,smallint
+customer,first_name,NO,character varying
+customer,last_name,NO,character varying
+customer,email,YES,character varying
+customer,address_id,NO,smallint
+customer,activebool,NO,boolean
+customer,create_date,NO,date
+customer,last_update,YES,timestamp without time zone
+customer,active,YES,integer
+customer_list,id,YES,integer
+customer_list,name,YES,text
+customer_list,address,YES,character varying
+customer_list,zip code,YES,character varying
+customer_list,phone,YES,character varying
+customer_list,city,YES,character varying
+customer_list,country,YES,character varying
+customer_list,notes,YES,text
+customer_list,sid,YES,smallint
+film,film_id,NO,integer
+film,title,NO,character varying
+film,description,YES,text
+film,release_year,YES,integer
+film,language_id,NO,smallint
+film,rental_duration,NO,smallint
+film,rental_rate,NO,numeric
+film,length,YES,smallint
+film,replacement_cost,NO,numeric
+film,rating,YES,USER-DEFINED
+film,last_update,NO,timestamp without time zone
+film,special_features,YES,ARRAY
+film,fulltext,NO,tsvector
+film_actor,actor_id,NO,smallint
+film_actor,film_id,NO,smallint
+film_actor,last_update,NO,timestamp without time zone
+film_category,film_id,NO,smallint
+film_category,category_id,NO,smallint
+film_category,last_update,NO,timestamp without time zone
+film_list,fid,YES,integer
+film_list,title,YES,character varying
+film_list,description,YES,text
+film_list,category,YES,character varying
+film_list,price,YES,numeric
+film_list,length,YES,smallint
+film_list,rating,YES,USER-DEFINED
+film_list,actors,YES,text
+inventory,inventory_id,NO,integer
+inventory,film_id,NO,smallint
+inventory,store_id,NO,smallint
+inventory,last_update,NO,timestamp without time zone
+language,language_id,NO,integer
+language,name,NO,character
+language,last_update,NO,timestamp without time zone
+nicer_but_slower_film_list,fid,YES,integer
+nicer_but_slower_film_list,title,YES,character varying
+nicer_but_slower_film_list,description,YES,text
+nicer_but_slower_film_list,category,YES,character varying
+nicer_but_slower_film_list,price,YES,numeric
+nicer_but_slower_film_list,length,YES,smallint
+nicer_but_slower_film_list,rating,YES,USER-DEFINED
+nicer_but_slower_film_list,actors,YES,text
+payment,payment_id,NO,integer
+payment,customer_id,NO,smallint
+payment,staff_id,NO,smallint
+payment,rental_id,NO,integer
+payment,amount,NO,numeric
+payment,payment_date,NO,timestamp without time zone
+rental,rental_id,NO,integer
+rental,rental_date,NO,timestamp without time zone
+rental,inventory_id,NO,integer
+rental,customer_id,NO,smallint
+rental,return_date,YES,timestamp without time zone
+rental,staff_id,NO,smallint
+rental,last_update,NO,timestamp without time zone
+sales_by_film_category,category,YES,character varying
+sales_by_film_category,total_sales,YES,numeric
+sales_by_store,store,YES,text
+sales_by_store,manager,YES,text
+sales_by_store,total_sales,YES,numeric
+staff,staff_id,NO,integer
+staff,first_name,NO,character varying
+staff,last_name,NO,character varying
+staff,address_id,NO,smallint
+staff,email,YES,character varying
+staff,store_id,NO,smallint
+staff,active,NO,boolean
+staff,username,NO,character varying
+staff,password,YES,character varying
+staff,last_update,NO,timestamp without time zone
+staff,picture,YES,bytea
+staff_list,id,YES,integer
+staff_list,name,YES,text
+staff_list,address,YES,character varying
+staff_list,zip code,YES,character varying
+staff_list,phone,YES,character varying
+staff_list,city,YES,character varying
+staff_list,country,YES,character varying
+staff_list,sid,YES,smallint
+store,store_id,NO,integer
+store,manager_staff_id,NO,smallint
+store,address_id,NO,smallint
+store,last_update,NO,timestamp without time zone

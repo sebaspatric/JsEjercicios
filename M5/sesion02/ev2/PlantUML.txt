@@ -1,0 +1,58 @@
+@startuml
+entity "Empresa" {
+    + RUT : String
+    + Nombre : String
+    + Dirección : String
+    + Teléfono : String
+    + Correo_Web : String
+}
+
+entity "Cliente" {
+    + RUT : String
+    + Nombre : String
+    + Correo : String
+    + Dirección : String
+    + Celular : String
+    + Fecha_Alta : Date
+    + Fecha_Baja : Date
+}
+
+entity "Vehículo" {
+    + IDVehículo : Integer
+    + Patente : String
+    + Marca : String
+    + Modelo : String
+    + Color : String
+    + Precio : Decimal
+    + FrecuenciaMantencion : String
+}
+
+entity "Mantención" {
+    + IDMantención : Integer
+    + Fecha : Date
+    + TrabajosRealizados : String
+}
+
+entity "Venta" {
+    + Folio : Integer
+    + Fecha : Date
+    + Monto : Decimal
+}
+
+entity "Marca" {
+    + IDMarca : Integer
+    + Nombre : String
+}
+
+entity "TipoVehículo" {
+    + IDTipoVehículo : Integer
+    + Nombre : String
+}
+
+Empresa ||--o{ Cliente : "tiene"
+Cliente ||--o{ Venta : "realiza"
+Cliente ||--o{ Vehículo : "posee"
+Vehículo ||--o{ Mantención : "tiene"
+Vehículo }o--|| Marca : "marca"
+Vehículo }o--|| TipoVehículo : "tipo"
+@enduml

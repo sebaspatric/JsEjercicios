@@ -1,0 +1,57 @@
+erDiagram
+    EMPRESA {
+        string RUT
+        string Nombre
+        string Dirección
+        string Teléfono
+        string Correo_Web
+    }
+
+    CLIENTE {
+        string RUT
+        string Nombre
+        string Correo
+        string Dirección
+        string Celular
+        date Fecha_Alta
+        date Fecha_Baja
+    }
+
+    VEHICULO {
+        int IDVehículo
+        string Patente
+        string Marca
+        string Modelo
+        string Color
+        decimal Precio
+        string FrecuenciaMantencion
+    }
+
+    MANTENCION {
+        int IDMantención
+        date Fecha
+        string TrabajosRealizados
+    }
+
+    VENTA {
+        int Folio
+        date Fecha
+        decimal Monto
+    }
+
+    MARCA {
+        int IDMarca
+        string Nombre
+    }
+
+    TIPOVEHICULO {
+        int IDTipoVehículo
+        string Nombre
+    }
+
+    EMPRESA ||--o{ CLIENTE : "tiene"
+    CLIENTE ||--o{ VENTA : "realiza"
+    CLIENTE ||--o{ VEHICULO : "posee"
+    VEHICULO ||--o{ MANTENCION : "tiene"
+    VEHICULO }o--|| MARCA : "marca"
+    VEHICULO }o--|| TIPOVEHICULO : "tipo"

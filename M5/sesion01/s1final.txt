@@ -1,0 +1,61 @@
+$ psql -U postgres
+Contraseña para usuario postgres:
+psql (17.0)
+ADVERTENCIA: El código de página de la consola (850) difiere del código
+            de página de Windows (1252).
+            Los caracteres de 8 bits pueden funcionar incorrectamente.
+            Vea la página de referencia de psql «Notes for Windows users»
+            para obtener más detalles.
+Digite «help» para obtener ayuda.
+
+postgres=# create database nuevo_curso;
+CREATE DATABASE
+
+postgres=# CREATE USER usuario1 WITH PASSWORD '1234';
+CREATE ROLE
+postgres=# CREATE USER usuario2 WITH PASSWORD '1234';
+CREATE ROLE
+postgres=# CREATE USER usuario3 WITH PASSWORD '1234';
+CREATE ROLE
+
+postgres=# alter user usuario1 with login;
+ALTER ROLE
+postgres=# alter user usuario2 with login;
+ALTER ROLE
+postgres=# alter user usuario3 with login;
+ALTER ROLE
+
+postgres-# \du
+                               Lista de roles
+ Nombre de rol |                         Atributos
+---------------+------------------------------------------------------------
+ nuevo_usuario |
+ postgres      | Superusuario, Crear rol, Crear BD, Replicaci¾n, Ignora RLS
+ seba2         | Superusuario
+ usuario1      |
+ usuario2      |
+ usuario3      |
+
+postgres-# \l
+                                                                          Listado de base de datos
+   Nombre    |  Due±o   | Codificaci¾n | Proveedor de locale |       Collate       |        Ctype        | Configuraci¾n regional | Reglas ICU: |        Privilegios
+-------------+----------+--------------+---------------------+---------------------+---------------------+------------------------+-------------+----------------------------
+ ecamp       | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             | =Tc/postgres              +
+             |          |              |                     |                     |                     |                        |             | postgres=CTc/postgres     +
+             |          |              |                     |                     |                     |                        |             | nuevo_usuario=CTc/postgres
+ ecommerce   | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+ nuevo_curso | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+ postgres    | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+ prueba      | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+ sga         | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+ template0   | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             | =c/postgres               +
+             |          |              |                     |                     |                     |                        |             | postgres=CTc/postgres
+ template1   | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             | =c/postgres               +
+             |          |              |                     |                     |                     |                        |             | postgres=CTc/postgres
+(9 filas)
+
+postgres-# \c nuevo_curso usuario1
+Contraseña para usuario usuario1:
+Ahora está conectado a la base de datos «nuevo_curso» con el usuario «usuario1».
+nuevo_curso->
+

@@ -1,0 +1,39 @@
+prueba=# create database ecamp;
+CREATE DATABASE
+prueba=# CREATE USER nuevo_usuario WITH PASSWORD '1234';
+CREATE ROLE
+prueba=# GRANT ALL PRIVILEGES ON DATABASE ecamp TO nuevo_usuario;
+GRANT
+prueba=# \du
+                               Lista de roles
+ Nombre de rol |                         Atributos
+---------------+------------------------------------------------------------
+ nuevo_usuario |
+ postgres      | Superusuario, Crear rol, Crear BD, Replicaci¾n, Ignora RLS
+ seba2         | Superusuario
+ usuario1      | Superusuario, No puede conectarse
+
+
+prueba=# \l
+                                                                          Listado de base de datos
+   Nombre   |  Due±o   | Codificaci¾n | Proveedor de locale |       Collate       |        Ctype        | Configuraci¾n regional | Reglas ICU: |        Privilegios
+------------+----------+--------------+---------------------+---------------------+---------------------+------------------------+-------------+----------------------------
+ ecamp      | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             | =Tc/postgres              +
+            |          |              |                     |                     |                     |                        |             | postgres=CTc/postgres     +
+            |          |              |                     |                     |                     |                        |             | nuevo_usuario=CTc/postgres
+ ecommerce  | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+ postgres   | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+ prueba     | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+ sga        | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+ template0  | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             | =c/postgres               +
+            |          |              |                     |                     |                     |                        |             | postgres=CTc/postgres
+ template1  | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             | =c/postgres               +
+            |          |              |                     |                     |                     |                        |             | postgres=CTc/postgres
+ transporte | postgres | UTF8         | libc                | Spanish_Mexico.1252 | Spanish_Mexico.1252 |                        |             |
+(8 filas)
+
+ecamp=# \c ecamp nuevo_usuario;
+Contraseña para usuario nuevo_usuario:
+
+Ahora está conectado a la base de datos «ecamp» con el usuario «nuevo_usuario».
+ecamp=>
