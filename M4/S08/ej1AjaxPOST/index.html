@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-
+scale=1.0"
+    />
+    <title>Ejercicio JQuery</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="/bootstrap-5.0.0-beta2-
+dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <button class="w-100 btn btn-lg btn-primary" style="margin-top: 45%">
+        Realiza consulta
+      </button>
+    </div>
+  </body>
+  <script>
+    $(function () {
+      $("button").click(function () {
+        $.post(
+          "https://jsonplaceholder.typicode.com/posts",
+          {
+            userId: 4,
+            id: 7,
+            title: "Esto es un Post realizado con jQuery",
+            body: "AJAX es muy util.",
+          },
+          function (data, status) {
+            console.log(data);
+            console.log(status);
+          }
+        );
+      });
+    });
+  </script>
+</html>
