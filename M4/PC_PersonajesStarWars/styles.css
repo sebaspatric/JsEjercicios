@@ -1,0 +1,142 @@
+/* Estilos comunes */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    /*dimension de texto*/
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 0;
+    height: auto; /* Ajusta automáticamente la altura según el contenido */
+    position: relative; /* Asegura que el layout esté controlado */
+}
+
+.range-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 300px; /* Fija la altura para que la línea y el punto se rendericen correctamente */
+    width: 200px; /* Ancho fijo para evitar desplazamientos */
+    margin-right: 20px;
+    padding: 0;
+    flex-shrink: 0; /* Previene que se reduzca al agregar más contenido */
+}
+
+.range {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px; /* Espacio entre el número y el punto */
+    z-index: 2; /* Asegura que el número esté sobre la línea */
+    font-size: large;
+    width: 100px;
+}
+
+.line-and-point {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Asegura que el contenido esté centrado */
+    height: 100%; /* Para que la línea abarque toda la altura */
+    width: 100%; /* Ancho fijo para que el punto no se desplace */
+}
+
+.yellow-point {
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; /* Coloca el punto en la altura media */
+    left: 50%; /* Centra el punto horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para que el punto se centre perfectamente */
+    z-index: 2;
+}
+
+.divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Centra la línea en el mismo lugar que el punto */
+    transform: translateX(-50%);
+    width: 2px; /* Grosor de la línea */
+    height: 100%; /* Abarca toda la altura del contenedor padre */
+    background-color: black;
+    z-index: 1; /* Asegura que la línea esté detrás del punto */
+}
+
+/* Estilos para las tarjetas */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-grow: 1; /* Permite que las tarjetas ocupen el resto del espacio */
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre el punto y el texto */
+    width: 280px;
+    margin: 10px;
+    padding: 15px;
+    background-color: lightblue;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.card .point {
+    width: 20px; /* 1/4 del ancho de la tarjeta */
+    height:20px; /* 1/4 del ancho de la tarjeta */
+    border-radius: 50%;
+    margin-right: 15px; /* Espacio entre el punto y el texto */
+}
+
+/* Colores de los puntos según la sección */
+.section-1-5 .card .point {
+    background-color: red; /* Punto rojo para la sección 1-5 */
+}
+
+.section-6-11 .card .point {
+    background-color: green; /* Punto verde para la sección 6-11 */
+}
+
+.section-12-17 .card .point {
+    background-color: cyan; /* Punto celeste para la sección 12-17 */
+}
+
+/* Estilos para los textos */
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info {
+    font-size: 14px;
+}

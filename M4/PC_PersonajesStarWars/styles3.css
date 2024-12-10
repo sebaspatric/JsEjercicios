@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sections {
+    position: relative;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;  /* Horizontal layout */
+    align-items: flex-start;  /* Align elements vertically at the top */
+    margin-bottom: 0px;
+    height: 300px; /* Ajusta la altura de la sección si es necesario */
+}
+
+.range-container {
+    display: flex;
+    align-items: center;  /* Alinea el número y el punto verticalmente centrado */
+    position: relative;  /* Necesario para la alineación de la línea */
+    height: 100%;         /* Hace que ocupe toda la altura disponible de la sección */
+    width: 150px;         /* Ancho fijo para el rango */
+    margin-right: 0px;   /* Espacio entre el rango y las tarjetas */
+    padding-right: 20px;
+}
+
+.range {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;  /* Espacio entre el número y el punto */
+    z-index: 2;  /* Aseguramos que el número quede por encima de la línea */
+}
+
+.line-and-point {
+    position: absolute; /* Asegura que la línea y el punto estén alineados */
+    top: 0;
+    left: 50%; /* Centra el punto y la línea horizontalmente */
+    transform: translateX(-50%); /* Alinea el contenido horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Para que la línea se extienda a toda la altura */
+}
+
+.yellow-point {
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute; /* Esto asegura que se superponga con la línea */
+    top: 0; /* Coloca el punto en la parte superior de la línea */
+}
+
+.divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;  /* Alinea la línea divisoria con el centro */
+    width: 2px; /* Grosor de la línea */
+    background-color: black;
+    z-index: 1;  /* Mantiene la línea debajo del número y punto */
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;  /* Alinea las tarjetas a la izquierda */
+}
+
+.card {
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    background-color: lightblue;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info {
+    font-size: 14px;
+}
