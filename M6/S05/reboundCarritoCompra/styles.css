@@ -1,0 +1,38 @@
+
+.producto {
+    border-bottom: 1px solid #dee2e6; /* Línea divisoria entre los productos */
+}
+
+
+
+
+/* Aseguramos que el contenedor general ocupe el 90% de la pantalla */
+.container {
+    height: 70vh;
+}
+
+/* Configuramos que ambos contenedores, carro y resumen, ocupen el 100% de la altura de su contenedor */
+.row.h-100 {
+    height: 100%;
+}
+
+/* Hacemos que el resumen de compra y el carro de compras tengan el mismo tamaño vertical */
+.carro, .resumen {
+    height: 100%;
+}
+
+/* Separador entre los productos y los totales */
+.separador {
+    border-top: 1px solid #ddd;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Fondo gris oscuro para el resumen de compra */
+.bg-light {
+    background-color: #cbced1 !important;
+}
+.producto img {
+    width: 70%; /* Ajusta el tamaño de la imagen, puedes cambiar este valor según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+}

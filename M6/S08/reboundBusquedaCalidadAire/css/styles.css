@@ -1,0 +1,86 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(to bottom, #64c1ff, #004aad);
+}
+
+.bg-gradient {
+    background: linear-gradient(to bottom, #64c1ff, #004aad);
+}
+
+input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+input {
+    font-size: 18px;
+    border-radius: 0;
+}
+
+.btn-light {
+    border-radius: 0;
+}
+
+/* Espaciado superior */
+.py-4 {
+    padding-top: 1.5rem !important; /* Ajusta los elementos hacia la parte superior */
+}
+
+/* Espaciado entre el input y el botón */
+.gap-3 {
+    gap: 15px;
+}
+
+
+
+/* Estilo para el input y el botón */
+#comuna {
+    width: 75%;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+button {
+    border-radius: 50px;
+}
+
+/* Resultados */
+#result .card  {
+    background-color: transparent !important;
+    border: none;
+    /*alinear texto a izquierda*/
+    text-align: left;
+    /*tamano del texto*/
+    font-size: 18px;
+    /*espacio entre las cards*/
+    margin-bottom: 10px;
+}
+
+#result .alert {
+    color: white;
+    background-color: transparent;
+    border: none !important;
+    
+}
+
+.card-header {
+    background-color: transparent !important;
+    border: none;
+    /*tamano del texto */
+    font-size: 18px;
+
+}
+
+
+
+/* Hacemos que el título sea más pequeño */
+h2 {
+    font-size: 0.6rem; /* Ajusta el tamaño según lo necesites */
+}

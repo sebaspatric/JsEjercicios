@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p style="background: lightseagreen;">
+      Este es un elemento de referencia.
+      </p>
+      <p style="background: orangered;" id="p2">
+      Este es otro. </p>
+
+      <p style="background: lightgreen;" id="p3">
+        Este es el último, todos tienen colores diferentes.
+        </p>
+        <br>
+        <button>Obtener el color de fondo del elemento</button>
+     
+   
+  </body>
+
+  <script>
+$(function () {
+ $("button").click(function () {
+ console.log($("p").css("background-color"));
+ console.log($("#p2").css("background-color"));
+ console.log($("#p3").css("background-color"));
+ });
+ });
+
+ $(function () {
+$("button").click(function () {
+$("p").css("background-color", "yellow");
+});
+});
+
+  </script>
+</html>

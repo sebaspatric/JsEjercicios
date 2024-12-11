@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+    background-color: #eeeff1;
+    color: white;
+    font-family: Verdana, sans-serif;
+}
+
+/* Estilos de color calipso */
+.text-calipso {
+    color: #62dad3;
+}
+
+.border-calipso {
+    border: 2px solid #62dad3;
+    border-radius: 15px;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    max-width: 500px;
+    background-color:  #1a237e;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    margin-top: 50px;
+    border-radius: 0%;
+}
+
+/* Inputs personalizados */
+.custom-input {
+    background-color: transparent !important;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0%;
+    outline: none !important;
+    padding: 0px;
+    position: relative;
+    box-shadow: 0 -4px 0 #62dad3 inset, 0 4px 4px -4px #62dad3;
+    transition: box-shadow 0.3s ease, border-bottom 0.3s ease;
+
+
+
+}
+
+.custom-input:focus {
+    
+    color: white;
+}
+
+
+
+/* Modal 
+fondo trasparente*/
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 5px;
+}
+
+
+.modal-body {
+    padding-left: 0; /* Quita los márgenes a los lados */
+    padding-right: 0; 
+    border-bottom: 2px solid #62dad3;
+}
+#contact-info {
+    padding-left: 15px; /* Opcional, para alinear el texto */
+}
+
+
+/* Botones del modal */
+.btn-custom {
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#call-button {
+    background-color: #62dad3;
+    border: none;
+    border-radius: 0%;
+}
+
+#email-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 0%;
+}
+
+button[type="submit"] {
+    margin-left: 0; /* Asegura que el botón esté alineado al borde izquierdo */
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 0%;
+    font-weight: bold;
+}
+

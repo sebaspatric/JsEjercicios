@@ -1,0 +1,162 @@
+/* Fondo con degradado para toda la página */
+body {
+    background: linear-gradient(to right, #008000, #FF0000); /* Degradado de verde a rojo */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima de la ventana */
+}
+
+/* Contenedor principal centrado */
+.container {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    max-width: 900px; /* Ancho máximo del contenedor */
+    width: 90%; /* Ajuste responsivo */
+    display: flex; /* Flexbox para organizar secciones */
+    gap: 20px; /* Espacio entre las secciones */
+    justify-content: space-between;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333; /* Color oscuro para el título */
+}
+
+/* Sección de ingredientes */
+.section {
+    flex: 1; /* Ocupa espacio proporcional */
+}
+
+/* Resumen del pedido */
+.summary {
+    flex: 0.8; /* Tamaño un poco más reducido para el resumen */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+}
+
+/* Botones */
+.button {
+    background-color: #62DAD3; /* Color de fondo del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #51BFB8; /* Cambio de color al pasar el cursor */
+}
+
+/* Input de propina */
+.input-propina input {
+    width: calc(100% - 120px); /* Ancho ajustado */
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-propina {
+    display: flex;
+    align-items: center;
+}
+
+/* Grupo de checkboxes */
+.checkbox-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo para el título ovalado */
+.titulo-ovalado {
+    background-color: #f0f0f0; /* Gris claro */
+    border-radius: 50px; /* Forma ovalada */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    color: #333333; /* Color del texto */
+    margin: 10px auto; /* Espaciado alrededor */
+    display: inline-block; /* Tamaño ajustado al contenido */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+/* Contenedor principal */
+.container {
+    align-items: flex-start; /* Asegura que ambos títulos estén alineados en la parte superior */
+}
+
+/* Secciones izquierda y derecha */
+.section {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columnas */
+    align-items: center; /* Centra horizontalmente el contenido dentro de la sección */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados para las secciones */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    height: auto; /* Ajusta la altura según el contenido */
+}
+
+/* Ajustes específicos para los títulos */
+.titulo-ovalado {
+    background-color: #f0f0f0; /* Gris claro */
+    border-radius: 50px; /* Forma ovalada */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    color: #333333; /* Color del texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    display: inline-block; /* Tamaño ajustado al contenido */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%; /* Para que el título tenga el mismo ancho */
+    max-width: 300px; /* Limitar el ancho máximo del título */
+}
+
+/* Contenedor de la propina */
+.propina-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Campo de entrada */
+input[type="number"] {
+    padding-right: 80px; /* Deja espacio suficiente para el botón a la derecha */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%; /* Ajusta al 100% del contenedor */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Botón "Ingresar Propina" */
+.button {
+    position: absolute;
+    right: 10px; /* Alinea el botón a la derecha dentro del input */
+    padding: 5px 10px; /* Espaciado del botón */
+    background-color: #62DAD3; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10; /* Asegura que el botón se superponga al input */
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #62DAD3;
+}

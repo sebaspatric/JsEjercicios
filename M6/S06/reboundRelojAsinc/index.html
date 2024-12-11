@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Horaria Mundial</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Hora Mundial</h1>
+        <div id="timezones" class="d-flex flex-column align-items-center">
+            <div class="timezone-card d-flex align-items-center" id="santiago">
+                <img src="https://flagcdn.com/w40/cl.png" alt="Chile">
+                <div>
+                    <div class="fw-bold" id="time-santiago"></div>
+                    <div>Santiago</div>
+                </div>
+            </div>
+            <div class="timezone-card d-flex align-items-center" id="paris">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Francia">
+                <div>
+                    <div class="fw-bold" id="time-paris"></div>
+                    <div>París</div>
+                </div>
+            </div>
+            <div class="timezone-card d-flex align-items-center" id="londres">
+                <img src="https://flagcdn.com/w40/gb.png" alt="Reino Unido">
+                <div>
+                    <div class="fw-bold" id="time-londres"></div>
+                    <div>Londres</div>
+                </div>
+            </div>
+            <div class="timezone-card d-flex align-items-center" id="nueva-york">
+                <img src="https://flagcdn.com/w40/us.png" alt="Estados Unidos">
+                <div>
+                    <div class="fw-bold" id="time-nueva-york"></div>
+                    <div>Nueva York</div>
+                </div>
+            </div>
+            <div class="timezone-card d-flex align-items-center" id="san-petersburgo">
+                <img src="https://flagcdn.com/w40/ru.png" alt="Rusia">
+                <div>
+                    <div class="fw-bold" id="time-san-petersburgo"></div>
+                    <div>San Petersburgo</div>
+                </div>
+            </div>
+            <div class="timezone-card d-flex align-items-center" id="beijing">
+                <img src="https://flagcdn.com/w40/cn.png" alt="China">
+                <div>
+                    <div class="fw-bold" id="time-beijing"></div>
+                    <div>Beijing</div>
+                </div>
+            </div>
+            <div class="timezone-card d-flex align-items-center" id="seul">
+                <img src="https://flagcdn.com/w40/kr.png" alt="Corea del Sur">
+                <div>
+                    <div class="fw-bold" id="time-seul"></div>
+                    <div>Seúl</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

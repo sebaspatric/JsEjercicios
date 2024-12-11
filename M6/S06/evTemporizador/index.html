@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white"> <!-- Fondo blanco para todo el cuerpo de la página -->
+    <!-- Contenedor principal con fondo plomo -->
+    <div id="main-container" class="d-flex justify-content-center align-items-center vh-100">
+        <div class="text-center">
+            <!-- Reloj -->
+            <div id="timer-display" class="mb-3">
+                <span id="timer">00</span>
+                <div>segundos</div>
+            </div>
+            <!-- Entrada de segundos -->
+            <div class="mb-3">
+                <label for="seconds-input" class="form-label">Ingresa segundos</label>
+                <input 
+                    type="number" 
+                    id="seconds-input" 
+                    class="form-control  mx-auto" 
+                    style="width: 150px;" 
+                    min="0" 
+                    placeholder="00">
+            </div>
+            <!-- Botones -->
+            <div class="buttons d-flex justify-content-center gap-3">
+                <button class="btn btn-success" id="start-btn">Empezar</button>
+                <button class="btn btn-danger" id="cancel-btn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

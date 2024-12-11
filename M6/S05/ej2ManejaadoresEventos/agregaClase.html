@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2>Primer elemento</h2>
+ <h5>Segundo elemento</h5>
+ <p>Tercer elemento</p>
+ <center><button>Agregar clase</button></center>
+  </body>
+
+  <style>
+.clasePrueba {
+font-weight: bold;
+font-size: xx-large;
+font-family: monospace;
+color: green;
+text-align: center;
+}
+
+  </style>
+   <script>
+    $(function () {
+$("button").click(function () {
+//Usamos el método addClass para asignarle una clase a una serie de elementos.
+$("h2, h5, p").addClass("clasePrueba");
+});
+});
+   </script>
+   </html>
+   
+</html>
