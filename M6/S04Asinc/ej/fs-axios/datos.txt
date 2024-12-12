@@ -1,0 +1,2 @@
+["post","comments","albums","photos","todos","users"]
+
