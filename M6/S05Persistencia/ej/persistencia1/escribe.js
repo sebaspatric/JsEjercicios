@@ -14,7 +14,7 @@ const escribirArchivo = async (contenido) => {
     }
 }
 //escribirArchivo();
-const obtieneDatos = async() => {
+const escribirDatos = async() => {
     try {
         const data = await fs.readFile('datos.txt', 'utf-8');
         //const objetoDatos = JSON.parse(data);
@@ -32,5 +32,43 @@ const obtieneDatos = async() => {
     }
 };
 
+//escribirDatos();
+const leerArchivo = async () => {
+    try {
+        const data = await fs.readFile('datos.txt', 'utf-8');
+        //console.log('Contenido del archivo:', data);
+        if (data.length == 0) {
+            console.log('El archivo está vacío.');
+            return;
+        }
+        console.log(JSON.parse(data));
+    } catch (error) {
+        console.error('Error leyendo el archivo:', error.message);
+    }
+};
 
-obtieneDatos();
+const verificarOpcionEntrada = () => {
+    switch (argumentosEntrada[0]) {
+        case 'leer':
+            leerArchivo();
+            break;
+        default:
+            escribirDatos();
+
+            console.error('Opción inválida. Use "escribir" o "leer".');
+            return;
+    }
+}
+
+// verificar parametros de entrada
+const verificaParametrosEntrada = () => {
+    if (argumentosEntrada.length == 0) {
+        console.error('Debe proporcionar un color y un puntaje.');
+        console.log ('tambien puedes pasar la opcion leer, para conocer el contenido del archivo datos.txt');
+        return process.exit();
+    }
+    return true;
+}
+
+verificaParametrosEntrada();
+verificarOpcionEntrada();

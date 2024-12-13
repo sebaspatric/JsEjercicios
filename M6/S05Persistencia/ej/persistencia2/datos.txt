@@ -1,5 +1,7 @@
 {
-  "azul": "12",
-  "rojo": "18",
-  "verde": "10"
+  "nombre": "JavaScript",
+  "backend": "true",
+  "frontend": "true",
+  "OOP": "true",
+  "HerramientaBackend": "Node JS"
 }
