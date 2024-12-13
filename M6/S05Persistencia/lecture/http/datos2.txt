@@ -1,0 +1,7 @@
+{
+"nombre": "JavaScript",
+"backend": "true",
+"frontend": "true",
+"OOP": "true",
+"HerramientaBackend": "Node JS"
+}
