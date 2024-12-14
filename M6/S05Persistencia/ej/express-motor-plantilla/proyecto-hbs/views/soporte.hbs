@@ -1,0 +1,18 @@
+{{> headers title = "Estás en soporte"}}
+
+<h1 class="p-5">{{title}}</h1>
+
+<div class="jumbotron jumbotron-fluid" style="background-color: #8C9EFF">
+    <div class="container">
+        {{#if estado}}
+        <p> {{soporte}}</p>
+        {{else}}
+        <p>No hay estado disponible.</p>
+
+        {{/if}}
+
+
+    </div>
+
+</div>
+{{> footer year = 2022}}
