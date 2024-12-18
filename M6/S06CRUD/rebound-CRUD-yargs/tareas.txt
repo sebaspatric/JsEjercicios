@@ -33,10 +33,5 @@
     "id": "b7c01290",
     "titulo": "nueva tarea",
     "contenido": "esta es una nueva tarea"
-  },
-  {
-    "id": "5c3f51b7",
-    "titulo": "nueva tarea",
-    "contenido": "esta es una nueva tarea"
   }
 ]
