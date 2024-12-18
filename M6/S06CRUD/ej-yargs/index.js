@@ -1,7 +1,7 @@
 const yargs = require('yargs');
 const {v4: uuidv4} = require('uuid');
 //const { readFile } = require('fs/promises');
-//const fs = require('fs');
+//const fs = require('fs/promises');
 const { readFile, writeFile } = require('fs/promises'); // Importar funciones basadas en promesas
 
 const createConfig = {
@@ -45,10 +45,14 @@ const funcionCreate = async ({titulo, contenido})=> {
     const id = uuidv4().slice(0,8);
     const nuevaTarea = {id: id, titulo: titulo, contenido: contenido};
 
+    // Leer archivo y agregar nueva tarea
+
+    //const tareas = await fs.readFile('tareas.txt');
     const tareas = await readFile('tareas.txt');
     const arrayTareas = JSON.parse(tareas);
 
     arrayTareas.push(nuevaTarea)
+    //await fs.writeFile('tareas.txt', JSON.stringify(arrayTareas, null, 2));
     await writeFile('tareas.txt', JSON.stringify(arrayTareas, null, 2));
     console.log('Tarea creada con éxito!');
 }
