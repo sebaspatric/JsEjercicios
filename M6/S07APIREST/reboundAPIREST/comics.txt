@@ -1,0 +1,26 @@
+{
+  "320alaaed-e753-4a94-8eeb-3140236a74e0": {
+    "titulo": "El intrépido Hombre Araña3",
+    "autor": "Stan Lee",
+    "issn": "12341234",
+    "cantidad": 340
+  },
+  "765ytrewq-890u-456v-7890-109876543210": {
+    "titulo": "Capitan America",
+    "autor": "Stan Lee",
+    "issn": "43214321",
+    "cantidad": 230
+  },
+  "04dc6327-12b9-43a9-9966-81776515fd1a": {
+    "titulo": "Capitán América contra el soldado de invierno",
+    "autor": "Stan Lee",
+    "issn": "56785678",
+    "cantidad": 230
+  },
+  "848fe245-e061-49b6-9a28-7745d1850816": {
+    "titulo": "Capitán América contra el soldado de invierno2",
+    "autor": "Stan Lee",
+    "issn": "56785678",
+    "cantidad": 230
+  }
+}

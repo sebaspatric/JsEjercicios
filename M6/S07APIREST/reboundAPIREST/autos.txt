@@ -1,0 +1,26 @@
+{
+  "1a2b3c4d": {
+    "marca": "Toyota",
+    "modelo": "vitara",
+    "año": 2020,
+    "color": "Rojo"
+  },
+  "5e6f7g8h": {
+    "marca": "Ford",
+    "modelo": "Mustang",
+    "año": 2018,
+    "color": "Azul"
+  },
+  "bce4e192-fa88-400e-bbd7-ae70ecd972a5": {
+    "marca": "hiundai",
+    "modelo": "accent",
+    "año": 2018,
+    "color": "blanco"
+  },
+  "9451da34-4a2b-45f0-b7e4-80286462a0a0": {
+    "marca": "hiundai",
+    "modelo": "Eleantra",
+    "año": 2018,
+    "color": "blanco"
+  }
+}
