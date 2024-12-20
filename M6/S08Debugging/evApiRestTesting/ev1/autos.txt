@@ -1,0 +1,74 @@
+{
+  "bce4e192": {
+    "marca": "hiundai",
+    "modelo": "accent",
+    "año": 2018,
+    "color": "Rojo"
+  },
+  "4c768fc2-a2d8-4143-97cf-7b09cbf96500": {
+    "marca": "hiundai",
+    "modelo": "Eleantra",
+    "año": 2018,
+    "color": "blanco"
+  },
+  "c309b18e-dbf0-4f40-964f-42dc69a5f571": {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "año": 2022,
+    "color": "Rojo"
+  },
+  "4af36a29-812d-402e-ad0d-32c13e84a510": {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "año": 2022,
+    "color": "Rojo"
+  },
+  "4e79216a-98ed-40b7-a887-14d32ee61b7f": {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "año": 2022,
+    "color": "Rojo"
+  },
+  "f3d3c1bb-ed41-4806-814f-7a7a7a379c4d": {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "año": 2023,
+    "color": "Azul"
+  },
+  "c0684f93-e51a-45f8-925c-946940a929cf": {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "año": 2023,
+    "color": "Azul"
+  },
+  "60d807ad-9b47-4a2d-8fb8-768f81dbb24f": {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "año": 2023,
+    "color": "Azul"
+  },
+  "609982f9-afcb-4114-9a1c-99e85592769a": {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "año": 2023,
+    "color": "Azul"
+  },
+  "bac251c5-4249-4cf2-b413-2f5ff7f309aa": {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "año": 2023,
+    "color": "Azul"
+  },
+  "de88b39d-ab04-47d4-8754-595d65703c81": {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "año": 2023,
+    "color": "Azul"
+  },
+  "0f7bd770-337a-4ec2-93b6-8f4c7391255f": {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "año": 2023,
+    "color": "Azul"
+  }
+}

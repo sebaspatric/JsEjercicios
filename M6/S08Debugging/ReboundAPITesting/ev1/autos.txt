@@ -1,0 +1,50 @@
+{
+  "bce4e192": {
+    "marca": "hiundai",
+    "modelo": "accent",
+    "año": 2018,
+    "color": "blanco"
+  },
+  "9451da34-4a2b-45f0-b7e4-80286462a0a0": {
+    "marca": "hiundai",
+    "modelo": "Eleantra",
+    "año": 2018,
+    "color": "blanco"
+  },
+  "4c768fc2-a2d8-4143-97cf-7b09cbf96500": {
+    "marca": "hiundai",
+    "modelo": "Eleantra",
+    "año": 2018,
+    "color": "blanco"
+  },
+  "c309b18e-dbf0-4f40-964f-42dc69a5f571": {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "año": 2022,
+    "color": "Rojo"
+  },
+  "4af36a29-812d-402e-ad0d-32c13e84a510": {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "año": 2022,
+    "color": "Rojo"
+  },
+  "4e79216a-98ed-40b7-a887-14d32ee61b7f": {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "año": 2022,
+    "color": "Rojo"
+  },
+  "f3d3c1bb-ed41-4806-814f-7a7a7a379c4d": {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "año": 2023,
+    "color": "Azul"
+  },
+  "c0684f93-e51a-45f8-925c-946940a929cf": {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "año": 2023,
+    "color": "Azul"
+  }
+}
