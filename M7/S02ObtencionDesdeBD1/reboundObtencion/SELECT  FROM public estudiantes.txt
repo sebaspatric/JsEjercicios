@@ -1,0 +1,27 @@
+1	SELECT * FROM public. estudiantes						
+
+id 		nombres		apellidos	eded 		MO-Identidad 
+integer		character 	character	integer		integer
+		varying					
+1		1 Jorge		Contreas		18	134534562
+2		2 Maria		Dugarte			21	736534562
+3		3 Pedro		Valera			26	524534562
+4		4 Juan		Valenzuela		22	854534562
+5		5 Gerardo	Carnacho		42	524534562
+6		6 Valentina	verna			26	452114874
+7		7 Cristina	De Jesus		28	528934562
+8		8 Betis		Carnargo		32	52434562
+9		9 Lisbeth	Guterrez		27	15234554
+10		10 Alfredo	Carnacaro		39	45212547
+
+
+
+id	 titulo			Descripcion			
+integer	character varying	character varying	
+1	Programacion 1		Descripcion de programacion 1
+2	Programacion 2		Descripcion de programacion 2
+3	Programacion 3		Descripcion de programacion 3
+4	Bases de Datos 1	Descripcion de Bases de Datos 1
+5	Bases de Datos 2	Descripcion de Bases de Datos 2
+6	Bases de Datos 3	Descripcion de Bases de Datos 3
+7	Bootcamp IA		Descripcion de Bootcamp IA
