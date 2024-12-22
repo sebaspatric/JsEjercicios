@@ -1,0 +1,16 @@
+{
+  "name": "reboundobtencion",
+  "version": "1.0.0",
+  "main": "crearTablas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "pg": "^8.13.1"
+  }
+}
