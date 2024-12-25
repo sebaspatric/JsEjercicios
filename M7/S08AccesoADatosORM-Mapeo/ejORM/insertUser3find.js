@@ -20,8 +20,4 @@ import User from "./User.js";
 
 //EXERCISE 3: CREAR EL MÉTODO ESTÁTICO DE BÚSQUEDA DE USUARIO POR ID
 // Buscamos un usuario segun el ID 1
-// User.Find(1)
-
- //  //EXERCISE 4: CREAR EL MÉTODO ESTÁTICO DE BUSCAR TODOS LOS USUARIOS
- let allUser = await User.All()
- console.log(allUser)
+ User.Find(1)
