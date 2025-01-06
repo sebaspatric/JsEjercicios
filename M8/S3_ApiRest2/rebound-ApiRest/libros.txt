@@ -1,0 +1,34 @@
+curl -X POST http://localhost:3000/api/jugadores \
+-H "Content-Type: application/json" \
+-d '{
+  "id": "4",
+  "nombre": "Gary Medel",
+  "posicion": "Defensa"
+}'
+
+-- Consultar un ID inexistente:
+curl -X GET http://localhost:3000/api/jugadores/99
+
+
+-- nombre duplicado 
+curl -X POST http://localhost:3000/api/jugadores \
+-H "Content-Type: application/json" \
+-d '{
+  "id": "1",
+  "nombre": "Elías Figueroa",
+  "posicion": "Defensa"
+}'
+
+
+
+{
+  "id": "1",
+  "nombre": "Lionel Messi",
+  "posicion": "Delantero"
+}
+
+
+{
+  "nombre": "Lionel Andrés Messi",
+  "posicion": "Delantero"
+}
