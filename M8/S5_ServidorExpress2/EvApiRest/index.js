@@ -2,102 +2,220 @@
 const express = require("express");
 // Cargando la librería de express-fileupload
 const fileUpload = require("express-fileupload");
-// Este variable define el puerto del computador donde la API esta disponible;
-const PORT = 5001;
-// Definimos la variable que inicializa la libreria Express.js
+const fs = require("fs");
+const path = require("path");
+
+const PORT = 3000;
 const app = express();
 
+// Configuración básica
+const baseUrl = "http://localhost:3000/files/";
+const booksDirectory = "./files/books/";
+
 // Middleware
+app.use(express.json());
 app.use(
   fileUpload({
     createParentPath: true,
   })
 );
 
-// 1 - El puerto donde esta disponible la API
-// 2 - Una función de llamada (callback) cuando la API esta lista
-app.listen(PORT, () =>
-  console.log(
-    `Corriendo en el servidor, API REST subida de archivos express-fileupload que se esta ejecutando en: http://localhost:${PORT}.`
-  )
-);
+// Crear directorio para libros si no existe
+if (!fs.existsSync(booksDirectory)) {
+  fs.mkdirSync(booksDirectory, { recursive: true });
+}
 
-app.post("/cargadearchivo", async (req, res) => {
+// Simulación de base de datos
+let books = [];
+
+// 1. Añadir un libro con imagen de portada
+app.post("/books", async (req, res) => {
   try {
-    // Validar que se hayan subido archivos
-    if (!req.files || Object.keys(req.files).length === 0) {
+    const { title, author } = req.body;
+
+    // Validaciones básicas
+    if (!title || !author) {
       return res.status(400).send({
-        status: false,
-        message: "No se subió ningún archivo.",
+        message: "El título y el autor son obligatorios.",
       });
     }
 
-    // Extraer los archivos enviados
-    let archivos = req.files.fileName; // `fileName` debe coincidir con el nombre del campo en Postman
-    if (!Array.isArray(archivos)) {
-      archivos = [archivos]; // Convertir en un array si solo es un archivo
-    }
-
-    // Validar que no sean más de 3 archivos
-    if (archivos.length > 3) {
+    if (!req.files || !req.files.cover) {
       return res.status(400).send({
-        status: false,
-        message: "Solo se permiten un máximo de 3 archivos.",
+        message: "Debe proporcionar una imagen de portada en formato PNG o JPG.",
       });
     }
 
-    // Configuración para validaciones
-    const extensionesPermitidas = ["image/png", "image/jpeg"];
-    const tamanoMaximo = 1 * 1024 * 1024; // 1MB
-
-    // Procesar cada archivo
-    const rutasSubidas = [];
-    for (let archivo of archivos) {
-      // Validar el tipo de archivo
-      if (!extensionesPermitidas.includes(archivo.mimetype)) {
-        return res.status(400).send({
-          status: false,
-          message: `El archivo ${archivo.name} no es válido. Solo se permiten imágenes PNG y JPEG.`,
-        });
-      }
-
-      // Validar el tamaño del archivo
-      if (archivo.size > tamanoMaximo) {
-        return res.status(400).send({
-          status: false,
-          message: `El archivo ${archivo.name} excede el tamaño máximo de 1MB.`,
-        });
-      }
-
-      // Ruta de destino
-      let uploadPath = `./files/${archivo.name}`;
-
-      // Mover el archivo al servidor
-      archivo.mv(uploadPath, (err) => {
-        if (err) {
-          return res.status(500).send({
-            status: false,
-            message: `Error al subir el archivo ${archivo.name}.`,
-            error: err,
-          });
-        }
+    const cover = req.files.cover;
+    const validExtensions = ["image/png", "image/jpeg"];
+    if (!validExtensions.includes(cover.mimetype)) {
+      return res.status(400).send({
+        message: "La portada debe ser una imagen PNG o JPG.",
       });
-
-      rutasSubidas.push(uploadPath);
     }
 
-    // Respuesta exitosa
-    return res.status(200).send({
-      status: true,
-      message: "Archivos subidos exitosamente.",
-      rutas: rutasSubidas,
+    // Guardar la portada en el servidor
+    const coverPath = path.join(booksDirectory, `${Date.now()}_${cover.name}`);
+    await cover.mv(coverPath);
+
+    // Crear el libro y guardarlo
+    const newBook = {
+      id: books.length + 1,
+      title,
+      author,
+      coverUrl: baseUrl + path.basename(coverPath),
+    };
+    books.push(newBook);
+
+    res.status(201).send({
+      message: "Libro añadido con éxito.",
+      book: newBook,
     });
   } catch (err) {
-    // Error inesperado
-    return res.status(500).send({
-      status: false,
-      message: "Se presentó un error inesperado.",
-      error: err,
+    res.status(500).send({
+      message: "Ocurrió un error al añadir el libro.",
+      error: err.message,
     });
   }
 });
+
+// 2. Eliminar un libro y su imagen de portada
+app.delete("/books/:id", (req, res) => {
+  const bookId = parseInt(req.params.id, 10);
+  const bookIndex = books.findIndex((b) => b.id === bookId);
+
+  if (bookIndex === -1) {
+    return res.status(404).send({
+      message: "Libro no encontrado.",
+    });
+  }
+
+  const book = books[bookIndex];
+
+  // Eliminar la portada del servidor
+  const coverPath = path.join(booksDirectory, path.basename(book.coverUrl));
+  if (fs.existsSync(coverPath)) {
+    fs.unlinkSync(coverPath);
+  }
+
+  // Eliminar el libro de la lista
+  books.splice(bookIndex, 1);
+
+  res.status(200).send({
+    message: "Libro eliminado con éxito.",
+  });
+});
+
+// 3. Actualizar un libro y su imagen de portada
+app.put("/books/:id", async (req, res) => {
+  try {
+    const bookId = parseInt(req.params.id, 10);
+    const bookIndex = books.findIndex((b) => b.id === bookId);
+
+    if (bookIndex === -1) {
+      return res.status(404).send({
+        message: "Libro no encontrado.",
+      });
+    }
+
+    const { title, author } = req.body;
+    const book = books[bookIndex];
+
+    // Actualizar título y autor
+    if (title) book.title = title;
+    if (author) book.author = author;
+
+    // Actualizar portada si se proporciona
+    if (req.files && req.files.cover) {
+      const cover = req.files.cover;
+      const validExtensions = ["image/png", "image/jpeg"];
+      if (!validExtensions.includes(cover.mimetype)) {
+        return res.status(400).send({
+          message: "La portada debe ser una imagen PNG o JPG.",
+        });
+      }
+
+      // Eliminar la portada anterior
+      const oldCoverPath = path.join(booksDirectory, path.basename(book.coverUrl));
+      if (fs.existsSync(oldCoverPath)) {
+        fs.unlinkSync(oldCoverPath);
+      }
+
+      // Guardar la nueva portada
+      const newCoverPath = path.join(booksDirectory, `${Date.now()}_${cover.name}`);
+      await cover.mv(newCoverPath);
+      book.coverUrl = baseUrl + path.basename(newCoverPath);
+    }
+
+    res.status(200).send({
+      message: "Libro actualizado con éxito.",
+      book,
+    });
+  } catch (err) {
+    res.status(500).send({
+      message: "Ocurrió un error al actualizar el libro.",
+      error: err.message,
+    });
+  }
+});
+
+// 4. Listar todos los libros
+app.get("/books", (req, res) => {
+  res.status(200).send(books);
+});
+
+// 5. Descargar portada de un libro
+app.get("/books/cover/:filename", (req, res) => {
+  const filename = req.params.filename;
+  const filePath = path.join(booksDirectory, filename);
+
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).send({
+      message: "Portada no encontrada.",
+    });
+  }
+
+  res.download(filePath);
+});
+
+// 6. Listar todos los archivos de la carpeta de libros
+app.get("/files", async (req, res) => {
+  fs.readdir(booksDirectory, (err, files) => {
+    if (err) {
+      res.status(500).send({
+        message: "No se puede buscar archivos en el directorio.",
+      });
+    }
+
+    let listFiles = [];
+    files.forEach((file) => {
+      listFiles.push({
+        name: file,
+        url: baseUrl + file,
+      });
+    });
+
+    res.status(200).send(listFiles);
+  });
+});
+
+// 7. Descargar un archivo específico
+app.get("/files/:name", (req, res) => {
+  const fileName = req.params.name;
+  const filePath = path.join(booksDirectory, fileName);
+
+  res.download(filePath, fileName, (err) => {
+    if (err) {
+      return res.status(500).send({
+        message: "No se puede descargar el archivo: " + err,
+      });
+    }
+  });
+});
+
+// Iniciar servidor
+app.listen(PORT, () =>
+  console.log(
+    `Servidor corriendo en: http://localhost:${PORT}.`
+  )
+);
