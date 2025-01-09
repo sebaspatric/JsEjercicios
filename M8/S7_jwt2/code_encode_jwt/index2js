@@ -1,0 +1,18 @@
+// importamos el modulo
+const sign = require("jwt-encode");
+// Definimos la clave secreta para la firma
+// Signature
+const secret = "clave_secreta";
+// Construcción del payload
+const data = {
+  name: "Pedro Perez",
+  iat: 1645565846.857, // Marca temporal de emision del JWT
+  iss: "localhost@jwr.com", // proveedor de identidad que emite el JWT
+  sub: "pedroperez@test.com", // Objeto o usuario que emite el JWT
+  ext: Date.now() / 1000 + 60 * 5, // Tiempo de expiración por 5 min
+};
+console.log(data);
+// devuelve un string firmado, pasando como argumento el
+// Playload y la Signature
+const jwt = sign(data, secret);
+console.log(jwt);
