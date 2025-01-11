@@ -1,0 +1,95 @@
+// Requerimiento para cargar las varables de entorno .env
+require("dotenv").config();
+const express = require("express");
+const app = express();
+app.use(express.json());
+// Logic goes here
+module.exports = app;
+
+// Librerias de encriptacion de jsonwebtoken
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+
+// Conectando a la base de datos
+require("./config/database").connect();
+
+// Importando la logista del modelo
+const User = require("./model/user");
+// Registro
+
+// Login
+app.post("/login", (req, res) => {
+  // lógica del inicio de sesión
+});
+
+// Registro
+app.post("/registro", async (req, res) => {
+  // logica del registro
+  try {
+    // obteniendo los valores de entrada
+    const { first_name, last_name, email, password } = req.body;
+    // Validar los datos de entrada
+    if (!(email && password && first_name && last_name)) {
+      res.status(400).send("Todos los campos son requeridos");
+    }
+    // Chequeando si el usuario existe
+    // Validar si el usuario existe en la bases de datos
+    const oldUser = await User.findOne({
+      email,
+    });
+    if (oldUser) {
+      return res
+        .status(409)
+        .send(
+          "Actualmente el usuario existe,inicie login en http://localhost:5001/login"
+        );
+    }
+    // Encriptando la contraseña del usuario
+    encryptedPassword = await bcrypt.hash(password, 10);
+    // Password encriptado
+    console.log("\nPassword encriptado: " + encryptedPassword);
+    // Creando el usuario en la bases de datos
+    const user = await User.create({
+      first_name,
+      last_name,
+      email: email.toLowerCase(), // Convertimos a minuscula
+      password: encryptedPassword,
+    });
+    // Creación del Token
+    const token = jwt.sign(
+      {
+        user_id: user._id,
+        email,
+      },
+      process.env.TOKEN_KEY,
+      {
+        expiresIn: "1h",
+      }
+    );
+    // Token Generado
+    console.log("\nToken Generdo: " + token);
+    // retornamos el nuevo usuario
+    return res.status(201).json(user);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+// Encriptando la contraseña del usuario
+//encryptedPassword = await bcrypt.hash(password, 10);
+
+//Generamos aleatoriamente el salt
+//const salt = await bcrypt.genSalt(10)
+//console.log("Salt generado: " + salt);
+// Encriptando la contraseña del usuario
+//encryptedPassword = await bcrypt.hash(password, salt);
+//console.log("\nPassword encriptado: " + encryptedPassword);
+
+// Creamos la variable de configuración
+var corsOpt = {
+  origin: "*", // Se debe reemplazar el * por el dominio de nuestro front
+  optionsSuccessStatus: 200, // Es necesario para navegadores antiguos o algunos SmartTVs
+};
+app.use(cors(corsOpt));
+
+
