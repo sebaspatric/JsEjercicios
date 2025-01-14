@@ -2,7 +2,7 @@ module.exports = {
   HOST: 'localhost',
   USER: 'node_user',
   PASSWORD: 'node_password',
-  DB: 'db_bootcamp',
+  DB: 'jwt_bootcamp1',
   dialect: 'postgres',
   pool: {
     max: 5,

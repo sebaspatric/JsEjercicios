@@ -74,7 +74,7 @@ exports.findById = async (req, res) => {
       include: [{
         model: User,
         as: "users",
-        attributes: ["id", "firstName", "lastName"],
+        attributes: ["id", "firstName", "lastName", "email"],
         through: { attributes: [] }, // No incluir atributos de la tabla intermedia
       }]
     });
@@ -96,7 +96,7 @@ exports.findAll = async (req, res) => {
       include: [{
         model: User,
         as: "users",
-        attributes: ["id", "firstName", "lastName"],
+        attributes: ["id", "firstName", "lastName", "email"],
         through: { attributes: [] }, // No incluir atributos de la tabla intermedia
       }]
     });
