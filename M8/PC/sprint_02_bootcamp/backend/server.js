@@ -35,6 +35,19 @@ db.sequelize.authenticate()
 
 
 
+  db.sequelize.sync({
+    force: true
+  }).then(() => {
+    console.log('Eliminando y resincronizando la base de datos.')
+    //run()
+  })
   
 
-  
+//  -- Otorga todos los privilegios sobre el esquema 'public' al usuario 'node_user'
+//GRANT ALL PRIVILEGES ON SCHEMA public TO node_user;
+
+//-- Permitir que 'node_user' cree tablas de manera predeterminada en el esquema 'public'
+//ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO node_user;
+
+//-- Asegúrate de que el propietario de la base de datos sea 'node_user' (si aplica)
+//ALTER DATABASE db_jwtbootcamp2 OWNER TO node_user;

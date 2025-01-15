@@ -1,6 +1,6 @@
 //models/bootcamp.model
 module.exports = (sequelize, DataTypes) => {
-  const Bootcamp = sequelize.define('bootcamp', {
+  const Bootcamp = sequelize.define('bootcamps', {
     title: {
       type: DataTypes.STRING,
       validate: {

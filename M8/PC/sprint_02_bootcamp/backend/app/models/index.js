@@ -30,7 +30,7 @@ db.users.belongsToMany(db.bootcamps, {
   foreignKey: "user_id",
 });
 db.bootcamps.belongsToMany(db.users, {
-  through: "user_bootcamp",
+  through: "user_bootcamp", 
   as: "users",
   foreignKey: "bootcamp_id",
 });
